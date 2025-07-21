@@ -113,6 +113,8 @@
   </footer>
 </body>
 </html> -->
+
+
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -129,24 +131,36 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo"><img src="Images/Updated_Logo.png" alt="Portillos Roofing Logo"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav class="site-nav">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
+          <li class="dropdown">
+            <a href="#services">Services ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="#services">Roof Replacement</a></li>
+              <li><a href="#services">Roof Repair</a></li>
+              <li><a href="#services">Inspections</a></li>
+            </ul>
+          </li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero / Slideshow Section -->
   <section id="home" class="hero">
-    <div class="hero-content">
+    <div class="slideshow-container">
+      <div class="slide fade"><img src="images/slide1.jpg" alt="Roof Slide 1"></div>
+      <div class="slide fade"><img src="images/slide2.jpg" alt="Roof Slide 2"></div>
+      <div class="slide fade"><img src="images/slide3.jpg" alt="Roof Slide 3"></div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="hero-overlay">
       <h1>Your Roof. Our Reputation.</h1>
       <p>Expert Roofing Services You Can Trust</p>
       <a href="#contact" class="btn-primary">Get a Free Quote</a>
@@ -158,18 +172,9 @@
     <div class="container">
       <h2>Our Services</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Roof Replacement</h3>
-          <p>Premium full roof replacements using top-quality materials.</p>
-        </div>
-        <div class="card">
-          <h3>Roof Repair</h3>
-          <p>Leak repairs, patchwork, and maintenance to extend roof life.</p>
-        </div>
-        <div class="card">
-          <h3>Inspections</h3>
-          <p>Thorough inspections for insurance claims and real estate.</p>
-        </div>
+        <div class="card"><h3>Roof Replacement</h3><p>Premium full roof replacements using top-quality materials.</p></div>
+        <div class="card"><h3>Roof Repair</h3><p>Leak repairs, patchwork, and maintenance to extend roof life.</p></div>
+        <div class="card"><h3>Inspections</h3><p>Thorough inspections for insurance claims and real estate.</p></div>
       </div>
     </div>
   </section>
@@ -201,15 +206,9 @@
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
         <input type="hidden" name="form-name" value="contact">
         <p hidden><label>Don’t fill this out: <input name="bot-field"></label></p>
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
+        <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+        <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
+        <div class="form-group"><textarea name="message" rows="5" placeholder="Your Message" required></textarea></div>
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
     </div>
@@ -219,11 +218,28 @@
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 Portillos Roofing LLC. All rights reserved.</p>
-      <div class="footer-info">
-        <p>Call us: (123) 456-7890</p>
-        <p>Email: info@portillosroofing.com</p>
-      </div>
+      <div class="footer-info"><p>Call us: (123) 456-7890</p><p>Email: info@portillosroofing.com</p></div>
     </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    navToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
+
+    // Slideshow functionality
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function showSlides(n) {
+      const slides = document.getElementsByClassName('slide');
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = 'none';
+      slides[slideIndex - 1].style.display = 'block';
+    }
+    setInterval(() => plusSlides(1), 5000);
+  </script>
 </body>
 </html>
