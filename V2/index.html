@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portillo Roofing LLC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <img src="images/logo.png" alt="Portillo Roofing Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Your Roof. Our Reputation.</h1>
+      <p>Reliable Roofing Solutions Built to Last</p>
+      <a href="#contact" class="cta-button">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Roof Replacements</h3>
+        <p>Full roof replacements with premium materials and expert workmanship.</p>
+      </div>
+      <div class="card">
+        <h3>Repairs & Maintenance</h3>
+        <p>Fast, effective repair work to prevent costly damage and leaks.</p>
+      </div>
+      <div class="card">
+        <h3>Inspections</h3>
+        <p>Professional inspections for insurance claims, sales, and maintenance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Why Choose Portillo Roofing?</h2>
+    <p>With years of experience and a commitment to quality, Portillo Roofing LLC delivers trustworthy, lasting roofing services throughout Texas.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Portillo Roofing LLC | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
