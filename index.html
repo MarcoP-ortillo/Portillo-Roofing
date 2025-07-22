@@ -122,36 +122,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portillos Roofing LLC</title>
+  <!-- Font Awesome Free 6 (CDN) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-pVn5x61Hqv2cTGf8vPiG7+0rhi8u+E4+Wl4N8ZD/uvf1/tfJq+1lXr0Cj/o8UJhMyjEPR6HZ2+Zqckd1w6r9Gg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="Images/Favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
+  <!-- Top contact bar -->
+  <div class="top-bar">
     <div class="container">
-      <a href="index.html" class="logo">
-        <img src="Images/Updated_Logo.png" alt="Stylized house roof with orange and black colors, small windowed dormer, chimney, and the text Portillo Roofing LLC in bold below, conveying professionalism and reliability">
-      </a></a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li class="dropdown">
-            <a href="#services">Services ▼</a>
+      <span class="top-text">
+        Affordable, High-Quality Professional Roofing Repair Services | Residential & Commercial.
+      </span>
+      <a href="/contact" class="contact-link">Contact us today!</a>
+      <span class="phone">
+        <i class="fa fa-phone"></i> (224) 775-7770
+      </span>
+    </div>
+  </div>
+
+  <!-- Main navigation -->
+  <header class="main-header">
+    <div class="container">
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
+      </a>
+
+      <!-- Primary nav (desktop + mobile) -->
+      <nav class="primary-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/about">About Us</a></li>
+
+          <!-- Services dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="dropdown-toggle">
+              Our Services <span class="chevron">▾</span>
+            </a>
             <ul class="dropdown-menu">
-              <li><a href="#services">Roof Replacement</a></li>
-              <li><a href="#services">Roof Repair</a></li>
-              <li><a href="#services">Inspections</a></li>
+              <li><a href="/services/metal">Metal Roofing</a></li>
+              <li><a href="/services/shingles">Shingles</a></li>
+              <li><a href="/services/repairs">Repairs</a></li>
+              <!-- …add more… -->
             </ul>
           </li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+          <li class="nav-item"><a href="/blog">Blog</a></li>
+          <li class="nav-item"><a href="/contact">Contact Us</a></li>
+
+          <!-- More dropdown -->
+          <li class="nav-item dropdown more-dropdown">
+            <a href="#" class="dropdown-toggle">
+              <i class="fa fa-bars"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/subscribe">Subscribe</a></li>
+              <li><a href="/reviews">Reviews</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
+
+      <!-- Mobile toggle -->
+      <button class="mobile-toggle">
+        <i class="fa fa-bars"></i>
+      </button>
     </div>
   </header>
+
+  <!-- Your hero / rest of page… -->
+
+  <!-- JS: dropdown + mobile toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // toggle each dropdown on click
+      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('open');
+        });
+      });
+      // mobile nav open/close
+      document.querySelector('.mobile-toggle').addEventListener('click', () => {
+        document.querySelector('.primary-nav').classList.toggle('open');
+      });
+    });
+  </script>
+</body>
 
   <!-- Hero / Slideshow Section -->
   <section id="home" class="hero">
