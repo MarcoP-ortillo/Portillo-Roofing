@@ -1,76 +1,197 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portillos Roofing LLC</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="Images/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portillo's Roofing LLC – Leading Experts in Residential & Commercial Roofing Solutions</title>
+  <link rel="shortcut icon" href="Images/Favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="Images/logo.png" alt="Portillos Roofing Logo">
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li class="dropdown">
-            <a href="#services">Services ▼</a>
-            <ul class="dropdown-menu">
-              <li><a href="#services">Roof Replacement</a></li>
-              <li><a href="#services">Roof Repair</a></li>
-              <li><a href="#services">Inspections</a></li>
-            </ul>
-          </li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-text">
+            Affordable, High-Quality Roofing Repair Services | Residential & Commercial
+            <a href="#contact">Contact us today!</a>
+          </div>
+          <div class="header-phone">
+            <a href="tel:5126291342">(512) 629‑1342</a>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo"><img src="Images/Updated_Logo.png" alt="Portillo Roofing LOGO"></a>
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero / Slideshow Section -->
-  <section id="home" class="hero">
-    <div class="slideshow-container">
-      <div class="slide fade"><img src="Images/slide1.jpg" alt="Roof Slide 1"></div>
-      <div class="slide fade"><img src="Images/slide2.jpg" alt="Roof Slide 2"></div>
-      <div class="slide fade"><img src="Images/slide3.jpg" alt="Roof Slide 3"></div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <div class="hero-overlay">
-      <h1>Your Roof. Our Reputation.</h1>
-      <p>Expert Roofing Services You Can Trust</p>
-      <a href="#contact" class="btn-primary">Get a Free Quote</a>
-    </div>
-  </section>
+    <!-- Banner -->
+    <section id="home" class="banner-section">
+      <div class="banner-bg" style="background-image:url('assets/images/slide-v2-1.jpg')"></div>
+      <div class="container">
+        <h1>Quality Roofing <span>SERVICES</span></h1>
+        <p>“We deliver top-quality workmanship and service with confidence, ensuring every project meets the highest standards.”</p>
+        <a href="#contact" class="btn">Get Appointment</a>
+      </div>
+    </section>
 
-  <!-- (… other sections: services, projects, about, contact, footer …) -->
+    <!-- Enquiry -->
+    <section id="enquiry" class="enquiry-section">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <form action="#" method="POST" class="enquiry-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit">Enquire Now</button>
+        </form>
+      </div>
+    </section>
 
-  <script>
-    // Mobile menu toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const siteNav = document.querySelector('.site-nav');
-    navToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
+    <!-- About -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <h5>Welcome to Portillo's Roofing Inc.</h5>
+          <h2>We Provide The Best Roofing Service</h2>
+          <p>Whether you need minor repairs or a complete roof replacement, we provide a full range of services tailored to your specific needs.</p>
+          <ul>
+            <li><strong>Residential Roofing</strong></li>
+            <li><strong>Commercial Roofing</strong></li>
+          </ul>
+        </div>
+        <div class="about-images">
+          <img src="Images/slide1.jpg" alt="About Image 1">
+          <img src="Images/slide2.jpg" alt="About Image 2">
+        </div>
+      </div>
+    </section>
 
-    // Slideshow functionality
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    function plusSlides(n) { showSlides(slideIndex += n); }
-    function showSlides(n) {
-      const slides = document.getElementsByClassName('slide');
-      if (n > slides.length) slideIndex = 1;
-      if (n < 1) slideIndex = slides.length;
-      for (let s of slides) s.style.display = 'none';
-      slides[slideIndex - 1].style.display = 'block';
-    }
-    setInterval(() => plusSlides(1), 5000);
-  </script>
+    <!-- Services -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h5>OUR SERVICES</h5>
+        <h2>Top Quality Roofing Service</h2>
+        <p>We are committed to providing exceptional roofing services for residential and commercial properties.</p>
+        <div class="services-list">
+          <div class="service-item">
+            <img src="Images/slide3.png" alt="Roof Installation">
+            <h3><a href="#">Roof Installation</a></h3>
+            <p>Expert installation using premium materials.</p>
+          </div>
+          <div class="service-item">
+            <img src="Images/slide4.jpg" alt="Roof Repair">
+            <h3><a href="#">Roof Damage Repair</a></h3>
+            <p>Quick, reliable repairs to extend your roof’s life.</p>
+          </div>
+          <div class="service-item">
+            <img src="Images/slide1.jpg" alt="Siding Installation">
+            <h3><a href="#">Siding Installation</a></h3>
+            <p>High-quality siding to protect and beautify.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="choose-us-section">
+      <div class="container">
+        <h5>Why Choose Us</h5>
+        <h2>Portillo's is your trusted partner for roofing services.</h2>
+        <p>As a fully licensed and insured company, you can trust your property is in capable hands.</p>
+        <ul class="features-list">
+          <li>Family Tradition Business</li>
+          <li>Professionally Trained Workers</li>
+          <li>Comprehensive Roof Inspection</li>
+          <li>Complete Roof Warranty</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <h2>Contact us today!</h2>
+        <p><a href="tel:5126291342">For Free Estimate call: 512.629.1342</a></p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h5>Testimonials</n5>
+        <h2>What our clients say about us?</h2>
+        <div class="testimonials-list">
+          <div class="testimonial-item">
+            <p>“Used them to repair rotted fascia. Great pricing, prompt, cleaned up—highly recommend!”</p>
+            <strong>— Bob Ellison, Client</strong>
+          </div>
+          <div class="testimonial-item">
+            <p>“Professional, courteous, and knowledgeable. Quality workmanship!”</p>
+            <strong>— Mary K Rauch, Client</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <h5>CURRENT ARTICLES</h5>
+        <h2>Our Latest Blogs</h2>
+        <p>We set ourselves apart by delivering unmatched expertise and reliability.</p>
+        <div class="blog-grid">
+          <article class="blog-post">
+            <img src="Images/slide1.png" alt="Blog Post 1">
+            <time datetime="2024-05-05">May 5, 2024</time>
+            <h3><a href="#">How to Spot Roof Damage After Heavy Winds</a></h3>
+            <p>Heavy winds can cause significant damage to your roof...</p>
+            <a href="#" class="read-more">Read more</a>
+          </article>
+          <article class="blog-post">
+            <img src="Images/slide1.png" alt="Blog Post 2">
+            <time datetime="2024-05-06">May 6, 2024</time>
+            <h3><a href="#">Is Your Roof Damaged? Here’s How to Tell</a></h3>
+            <p>Roofs are built to withstand a lot, but time and weather...</p>
+            <a href="#" class="read-more">Read more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <img src="Images/Updated_Logo.png" alt="Portillo's Roofing">
+          </div>
+          <p>We service all the Chicago Metropolitan areas.</p>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:Customerservice@portillo-roofing.com">Customerservice@portillo-roofing.com</a>
+          <a href="tel:5126291342">(512) 629‑1342</a>
+          <p>Mon–Fri: 8AM to 5PM</p>
+        </div>
+        <p class="copyright">&copy; 2025 Portillo's Roofing LLC. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div> <!-- /.page-wrapper -->
 </body>
 </html>
+
