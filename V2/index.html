@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portillos Roofing LLC</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="Images/logo.png" alt="Portillos Roofing Logo">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li class="dropdown">
+            <a href="#services">Services ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="#services">Roof Replacement</a></li>
+              <li><a href="#services">Roof Repair</a></li>
+              <li><a href="#services">Inspections</a></li>
+            </ul>
+          </li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Slideshow Section -->
+  <section id="home" class="hero">
+    <div class="slideshow-container">
+      <div class="slide fade"><img src="Images/slide1.jpg" alt="Roof Slide 1"></div>
+      <div class="slide fade"><img src="Images/slide2.jpg" alt="Roof Slide 2"></div>
+      <div class="slide fade"><img src="Images/slide3.jpg" alt="Roof Slide 3"></div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="hero-overlay">
+      <h1>Your Roof. Our Reputation.</h1>
+      <p>Expert Roofing Services You Can Trust</p>
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- (… other sections: services, projects, about, contact, footer …) -->
+
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    navToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
+
+    // Slideshow functionality
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function showSlides(n) {
+      const slides = document.getElementsByClassName('slide');
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      for (let s of slides) s.style.display = 'none';
+      slides[slideIndex - 1].style.display = 'block';
+    }
+    setInterval(() => plusSlides(1), 5000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.site-header {
+  background: #004080;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 1rem;
+}
+.logo img {
+  height: 70px;
+  transition: transform 0.3s;
+}
+.logo img:hover {
+  transform: scale(1.2);
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-left: auto;
+}
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #0059b3;
+  list-style: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+.dropdown-menu a {
+  color: #fff;
+}
+/* Hero slideshow */
+.hero {
+  position: relative;
+  margin-top: 80px;
+}
+.slideshow-container {
+  position: relative;
+  max-height: 500px;
+  overflow: hidden;
+}
+.slide {
+  display: none;
+  width: 100%;
+}
+.slide img {
+  width: 100%;
+  display: block;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 2rem;
+  user-select: none;
+  transform: translateY(-50%);
+}
+.prev { left: 1rem; }
+.next { right: 1rem; }
+.hero-overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #fff;
+}
+/* …and so on… */
