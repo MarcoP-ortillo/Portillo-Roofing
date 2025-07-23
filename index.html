@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portillos Roofing LLC</title>
+  <title>Portillo Roofing LLC</title>
   <!-- Font Awesome Free 6 (CDN) -->
 <link
   rel="stylesheet"
@@ -45,7 +45,7 @@
     <div class="container">
       <!-- Logo -->
       <a href="/" class="logo">
-        <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
+        <img src="Images/Updated_Logo.png" alt="Portillo Roofing">
       </a>
 
       <!-- Primary nav (desktop + mobile) -->
@@ -110,28 +110,7 @@
   </script>
 
 </body>
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
 
-  // advance/rewind on arrow clicks
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  // core show/hide logic
-  function showSlides(n) {
-    const slides = document.getElementsByClassName("slide");
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1)           slideIndex = slides.length;
-    // hide all
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    // show current
-    slides[slideIndex - 1].style.display = "block";
-  }
-</script>
   <!-- Hero / Slideshow Section -->
   <section id="home" class="hero">
     <div class="slideshow-container">
@@ -147,6 +126,28 @@
       <p>Expert Roofing Services You Can Trust</p>
       <a href="#contact" class="btn-primary">Get a Free Quote</a>
     </div>
+    <script>
+     let slideIndex = 1;
+     showSlides(slideIndex);
+
+     // advance/rewind on arrow clicks
+     function plusSlides(n) {
+      showSlides(slideIndex += n);
+      } 
+
+      // core show/hide logic
+     function showSlides(n) {
+      const slides = document.getElementsByClassName("slide");
+     if (n > slides.length) slideIndex = 1;
+     if (n < 1)           slideIndex = slides.length;
+     // hide all
+     for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+     }
+     // show current
+     slides[slideIndex - 1].style.display = "block";
+     }
+    </script>
   </section>
 
   <!-- Services Section -->
