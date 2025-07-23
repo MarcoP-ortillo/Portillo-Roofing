@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Services – Portillo Roofing LLC</title>
+  <!-- favicon, FontAwesome, your style.css -->
+  <link rel="shortcut icon" href="Images/favicon.jpg">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVn5x61Hqv2cTGf8vPiG7+0rhi8u+E4+Wl4N8ZD/uvf1/tfJq+1lXr0Cj/o8UJhMyjEPR6HZ2+Zqckd1w6r9Gg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top bar (unchanged) -->
+  <div class="top-bar">
+    <div class="container">
+      <span class="top-text">
+        Affordable, High-Quality Professional Roofing Repair Services | Residential & Commercial.
+      </span>
+      <a href="contact.html" class="contact-link">Contact us today!</a>
+      <span class="phone">
+        <i class="fas fa-phone"></i> (512) 629-1342
+      </span>
+    </div>
+  </div>
+
+  <!-- Main header/nav (with updated links) -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
+      </a>
+
+      <!-- copy in the same <nav> block from step 2 -->
+      <nav class="primary-nav">
+        …(nav-list from step 2)…
+      </nav>
+
+      <button class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page-specific content -->
+  <main class="container" style="padding: 100px 15px 30px;">
+    <h1>About Us</h1>
+    <p>
+      Portillo Roofing LLC was founded with a clear purpose: to bring honesty,
+      craftsmanship, and fairness back to the roofing industry. After more than 25 years …
+    </p>
+    <!-- …more about-us content… -->
+  </main>
+
+  <!-- shared nav JS (dropdown + mobile toggle) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', e => {
+          e.preventDefault();
+          toggle.parentElement.classList.toggle('open');
+        });
+      });
+      document.querySelector('.mobile-toggle').addEventListener('click', () => {
+        document.querySelector('.primary-nav').classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
