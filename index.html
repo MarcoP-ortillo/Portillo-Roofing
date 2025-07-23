@@ -108,9 +108,30 @@
       });
     });
   </script>
-<!-- Slideshow logic is handled in the script at the end of the body -->
-</body>
 
+</body>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // advance/rewind on arrow clicks
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // core show/hide logic
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1)           slideIndex = slides.length;
+    // hide all
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    // show current
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
   <!-- Hero / Slideshow Section -->
   <section id="home" class="hero">
     <div class="slideshow-container">
@@ -205,28 +226,6 @@
     const navToggle = document.querySelector('.nav-toggle');
     const siteNav = document.querySelector('.site-nav');
     navToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
-    
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    // advance/rewind on arrow clicks
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
-    }
-
-    // core show/hide logic
-    function showSlides(n) {
-    const slides = document.getElementsByClassName("slide");
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1)           slideIndex = slides.length;
-    // hide all
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    // show current
-    slides[slideIndex - 1].style.display = "block";
-  }
-
   </script>
 </body>
 </html>
