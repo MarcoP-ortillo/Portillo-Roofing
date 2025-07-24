@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our Services – Portillo Roofing LLC</title>
-  <!-- favicon, FontAwesome, your style.css -->
-  <link rel="shortcut icon" href="Images/favicon.jpg">
+  <link rel="shortcut icon" href="Images/favicon.jpg" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,10 +12,10 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top bar (unchanged) -->
+  <!-- Top contact bar -->
   <div class="top-bar">
     <div class="container">
       <span class="top-text">
@@ -29,71 +28,60 @@
     </div>
   </div>
 
-  <!-- Main header/nav (with updated links) -->
+  <!-- Header and navigation -->
   <header class="main-header">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
+        <img src="Images/Updated_Logo.png" alt="Portillo Roofing" />
       </a>
-
-      <!-- Site navigation -->
       <nav class="primary-nav" role="navigation">
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html">Home</a></li>
           <li class="nav-item"><a href="about.html">About Us</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle">Our Services <span class="chevron">▾</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="services.html#metal">Metal Roofing</a></li>
-              <li><a href="services.html#shingles">Shingle Roofing</a></li>
-              <li><a href="services.html#repairs">Repairs &amp; Maintenance</a></li>
-            </ul>
-          </li>
+          <!-- Single Services link instead of dropdown -->
+          <li class="nav-item"><a href="services.html">Services</a></li>
           <li class="nav-item"><a href="blog.html">Blog</a></li>
           <li class="nav-item"><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-
-      <button class="mobile-toggle">
+      <button class="mobile-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
 
-  <!-- Page-specific content -->
+  <!-- Services content -->
   <main class="container" style="padding: 100px 15px 30px;">
     <h1>Our Services</h1>
     <p>We offer a full suite of roofing services for residential and commercial properties. Below are some of our most
-      popular offerings. Click on any service to learn more.</p>
+      popular offerings. Click the button on any service to reach out and discuss your project.</p>
     <div class="grid">
       <div class="card" id="metal">
         <h2>Metal Roofing</h2>
         <p>Durable and energy‑efficient metal roofing installed by experienced professionals to protect your home or business.
           Our metal roofs come in a variety of colors and profiles to complement your architecture.</p>
+        <a href="contact.html?subject=Metal%20Roofing" class="btn-primary">Contact Us</a>
       </div>
       <div class="card" id="shingles">
         <h2>Shingle Roofing</h2>
         <p>Traditional composition shingle roofs available in a range of styles and budgets. Let us help you select the
           perfect shingle system for long‑lasting beauty and protection.</p>
+        <a href="contact.html?subject=Shingle%20Roofing" class="btn-primary">Contact Us</a>
       </div>
       <div class="card" id="repairs">
         <h2>Repairs &amp; Maintenance</h2>
         <p>From leak repair and patchwork to storm damage restoration, our repair and maintenance services extend the life
           of your existing roof and keep small issues from turning into big problems.</p>
+        <a href="contact.html?subject=Repairs%20and%20Maintenance" class="btn-primary">Contact Us</a>
       </div>
     </div>
   </main>
 
-  <!-- shared nav JS (dropdown + mobile toggle) -->
+  <!-- Navigation script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', e => {
-          e.preventDefault();
-          toggle.parentElement.classList.toggle('open');
-        });
-      });
-      document.querySelector('.mobile-toggle').addEventListener('click', () => {
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile nav toggle
+      document.querySelector('.mobile-toggle').addEventListener('click', function () {
         document.querySelector('.primary-nav').classList.toggle('open');
       });
     });

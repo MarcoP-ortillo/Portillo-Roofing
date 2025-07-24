@@ -12,8 +12,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portillo Roofing LLC</title>
-  <!-- Added meta description for SEO -->
-  <meta name="description" content="Portillo Roofing LLC offers affordable, high‑quality roofing repair and replacement services in the Kyle, Texas area. Contact us for residential and commercial roofing solutions." />
   <!-- Font Awesome Free 6 (CDN) -->
 <link
   rel="stylesheet"
@@ -35,7 +33,7 @@
       <span class="top-text">
         Affordable, High-Quality Professional Roofing Repair Services | Residential & Commercial.
       </span>
-      <a href="/contact" class="contact-link">Contact us today!</a>
+      <a href="contact.html" class="contact-link">Contact us today!</a>
       <span class="phone">
         <i class="fa fa-phone"></i> (512) 629-1342
       </span>
@@ -46,41 +44,24 @@
   <header class="main-header">
     <div class="container">
       <!-- Logo -->
-      <a href="index.html" class="logo">
+      <a href="/" class="logo">
         <img src="Images/Updated_Logo.png" alt="Portillo Roofing">
       </a>
 
       <!-- Primary nav (desktop + mobile) -->
-     <nav class="primary-nav" role="navigation">
+     <nav class="primary-nav">
   <ul class="nav-list">
     <li class="nav-item"><a href="index.html">Home</a></li>
     <li class="nav-item"><a href="about.html">About Us</a></li>
-    <li class="nav-item dropdown">
-      <a href="#" class="dropdown-toggle">
-        Our Services <span class="chevron">▾</span>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="services.html#metal">Metal Roofing</a></li>
-        <li><a href="services.html#shingles">Shingles</a></li>
-        <li><a href="services.html#repairs">Repairs</a></li>
-      </ul>
-    </li>
+    <!-- Single Services link now points to a dedicated services page instead of a dropdown -->
+    <li class="nav-item"><a href="services.html">Services</a></li>
     <li class="nav-item"><a href="blog.html">Blog</a></li>
     <li class="nav-item"><a href="contact.html">Contact Us</a></li>
-    <li class="nav-item dropdown more-dropdown">
-      <a href="#" class="dropdown-toggle">
-        <i class="fas fa-bars"></i>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="subscribe.html">Subscribe</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-      </ul>
-    </li>
   </ul>
 </nav>
 
       <!-- Mobile toggle -->
-      <button class="mobile-toggle" aria-label="Toggle navigation">
+      <button class="mobile-toggle">
         <i class="fa fa-bars"></i>
       </button>
     </div>
@@ -88,16 +69,9 @@
 
   <!-- Your hero / rest of page… -->
 
-  <!-- JS: dropdown + mobile toggle -->
+  <!-- JS: mobile navigation toggle -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // toggle each dropdown on click
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          this.parentElement.classList.toggle('open');
-        });
-      });
       // mobile nav open/close
       document.querySelector('.mobile-toggle').addEventListener('click', () => {
         document.querySelector('.primary-nav').classList.toggle('open');
@@ -110,10 +84,9 @@
   <!-- Hero / Slideshow Section -->
   <section id="home" class="hero">
     <div class="slideshow-container">
-      <!-- Updated descriptive alt text for better accessibility -->
-      <div class="slide fade"><img src="Images/slide4.png" alt="Residential house with new shingle roof" /></div>
-      <div class="slide fade"><img src="Images/slide2.png" alt="Modern flat roof property with patio" /></div>
-      <div class="slide fade"><img src="Images/slide3.png" alt="Gray roof with wooden accents on a home" /></div>
+      <div class="slide fade"><img src="Images/slide4.png" alt="Roof Slide 1"></div>
+      <div class="slide fade"><img src="Images/slide2.png" alt="Roof Slide 2"></div>
+      <div class="slide fade"><img src="Images/slide3.png" alt="Roof Slide 3"></div>
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
@@ -124,26 +97,38 @@
       <a href="#contact" class="btn-primary">Get a Free Quote</a>
     </div>
     <script>
-     let slideIndex = 1;
-     showSlides(slideIndex);
+      /*
+        Image slider logic:
+        - Maintains a global slideIndex to track the current slide.
+        - showSlides(n) hides all slides and displays the selected one.
+        - plusSlides(n) adjusts the index and calls showSlides().
+        - An interval automatically advances the slides every 5 seconds.
+      */
+      let slideIndex = 1;
+      showSlides(slideIndex);
 
-     // advance/rewind on arrow clicks
-     function plusSlides(n) {
-      showSlides(slideIndex += n);
-      } 
+      // Navigate to the next/previous slide on arrow clicks
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
 
-      // core show/hide logic
-     function showSlides(n) {
-      const slides = document.getElementsByClassName("slide");
-     if (n > slides.length) slideIndex = 1;
-     if (n < 1)           slideIndex = slides.length;
-     // hide all
-     for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-     }
-     // show current
-     slides[slideIndex - 1].style.display = "block";
-     }
+      // Show the slide with the given index and hide others
+      function showSlides(n) {
+        const slides = document.getElementsByClassName("slide");
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        // hide all slides
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        // show current slide
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      // Automatically advance the slides every 5 seconds
+      setInterval(() => {
+        plusSlides(1);
+      }, 5000);
     </script>
   </section>
 

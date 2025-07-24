@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us – Portillo Roofing LLC</title>
-  <!-- favicon, FontAwesome, your style.css -->
-  <link rel="shortcut icon" href="Images/favicon.jpg">
+  <link rel="shortcut icon" href="Images/favicon.jpg" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,10 +12,10 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top bar (unchanged) -->
+  <!-- Top contact bar -->
   <div class="top-bar">
     <div class="container">
       <span class="top-text">
@@ -29,44 +28,35 @@
     </div>
   </div>
 
-  <!-- Main header/nav (with updated links) -->
+  <!-- Header and navigation -->
   <header class="main-header">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
+        <img src="Images/Updated_Logo.png" alt="Portillo Roofing" />
       </a>
-
-      <!-- Site navigation -->
       <nav class="primary-nav" role="navigation">
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html">Home</a></li>
           <li class="nav-item"><a href="about.html">About Us</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle">Our Services <span class="chevron">▾</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="services.html#metal">Metal Roofing</a></li>
-              <li><a href="services.html#shingles">Shingle Roofing</a></li>
-              <li><a href="services.html#repairs">Repairs &amp; Maintenance</a></li>
-            </ul>
-          </li>
+          <!-- Single Services link instead of dropdown -->
+          <li class="nav-item"><a href="services.html">Services</a></li>
           <li class="nav-item"><a href="blog.html">Blog</a></li>
           <li class="nav-item"><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-
-      <button class="mobile-toggle">
+      <button class="mobile-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
 
-  <!-- Page-specific content -->
+  <!-- About content -->
   <main class="container" style="padding: 100px 15px 30px;">
     <h1>About Us</h1>
     <p>
-      Portillo Roofing LLC was founded with a clear purpose: to bring honesty, craftsmanship, and fairness back to the roofing
+      Portillo Roofing LLC was founded with a clear purpose: to bring honesty, craftsmanship and fairness back to the roofing
       industry. After more than 25 years of subcontracting for a large company known for overcharging clients and underpaying
-      workers, <strong>Marco Portillo&nbsp;Sr.</strong> knew there had to be a better way&nbsp;— one built on respect, integrity and community values.
+      workers, <strong>Marco Portillo&nbsp;Sr.</strong> knew there had to be a better way — one built on respect, integrity and community values.
     </p>
     <p>
       Driven by that vision, Marco&nbsp;Sr. teamed up with his son to create a roofing company where quality work and ethical
@@ -75,25 +65,20 @@
     </p>
     <p>
       We specialize in <strong>metal roofing</strong>, but our team is well‑equipped and highly experienced in all roofing systems — from
-      composition shingles to commercial‑grade flat roofs. Whether you need a full replacement, repair, or honest guidance,
+      composition shingles to commercial‑grade flat roofs. Whether you need a full replacement, repair or honest guidance,
       we approach every job with care, precision and open communication.
     </p>
     <p>
-      We’re not just here to put a roof over your head&nbsp;— we’re here to earn your trust, build lasting relationships and raise the
+      We’re not just here to put a roof over your head — we’re here to earn your trust, build lasting relationships and raise the
       bar for what a roofing company should be.
     </p>
   </main>
 
-  <!-- shared nav JS (dropdown + mobile toggle) -->
+  <!-- Navigation and toggle script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', e => {
-          e.preventDefault();
-          toggle.parentElement.classList.toggle('open');
-        });
-      });
-      document.querySelector('.mobile-toggle').addEventListener('click', () => {
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile nav toggle
+      document.querySelector('.mobile-toggle').addEventListener('click', function () {
         document.querySelector('.primary-nav').classList.toggle('open');
       });
     });

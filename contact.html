@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us – Portillo Roofing LLC</title>
-  <!-- favicon, FontAwesome, your style.css -->
-  <link rel="shortcut icon" href="Images/favicon.jpg">
+  <link rel="shortcut icon" href="Images/favicon.jpg" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,10 +12,10 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top bar (unchanged) -->
+  <!-- Top contact bar -->
   <div class="top-bar">
     <div class="container">
       <span class="top-text">
@@ -29,44 +28,36 @@
     </div>
   </div>
 
-  <!-- Main header/nav (with updated links) -->
+  <!-- Header and navigation -->
   <header class="main-header">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
+        <img src="Images/Updated_Logo.png" alt="Portillo Roofing" />
       </a>
-
-      <!-- Site navigation -->
       <nav class="primary-nav" role="navigation">
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html">Home</a></li>
           <li class="nav-item"><a href="about.html">About Us</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle">Our Services <span class="chevron">▾</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="services.html#metal">Metal Roofing</a></li>
-              <li><a href="services.html#shingles">Shingle Roofing</a></li>
-              <li><a href="services.html#repairs">Repairs &amp; Maintenance</a></li>
-            </ul>
-          </li>
+          <!-- Single Services link instead of dropdown -->
+          <li class="nav-item"><a href="services.html">Services</a></li>
           <li class="nav-item"><a href="blog.html">Blog</a></li>
           <li class="nav-item"><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-
-      <button class="mobile-toggle">
+      <button class="mobile-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
 
-  <!-- Page-specific content -->
+  <!-- Contact content -->
   <main class="container" style="padding: 100px 15px 30px;">
     <h1>Contact Us</h1>
     <p>We’d love to hear from you! Reach out using the form below or call us at (512) 629‑1342.</p>
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
       <input type="hidden" name="form-name" value="contact" />
       <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+      <div class="form-group"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
       <div class="form-group"><input type="text" name="name" placeholder="Your Name" required /></div>
       <div class="form-group"><input type="email" name="email" placeholder="Your Email" required /></div>
       <div class="form-group"><textarea name="message" rows="5" placeholder="Your Message" required></textarea></div>
@@ -74,18 +65,19 @@
     </form>
   </main>
 
-  <!-- shared nav JS (dropdown + mobile toggle) -->
+  <!-- Navigation script and subject prefill -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', e => {
-          e.preventDefault();
-          toggle.parentElement.classList.toggle('open');
-        });
-      });
-      document.querySelector('.mobile-toggle').addEventListener('click', () => {
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile nav toggle
+      document.querySelector('.mobile-toggle').addEventListener('click', function () {
         document.querySelector('.primary-nav').classList.toggle('open');
       });
+      // Prefill subject from query parameter
+      const params = new URLSearchParams(window.location.search);
+      const subject = params.get('subject');
+      if (subject) {
+        document.getElementById('subject').value = subject;
+      }
     });
   </script>
 </body>
