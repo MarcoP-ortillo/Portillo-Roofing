@@ -1,108 +1,210 @@
+<!-- This is the main HTML file for Portillo Roofing LLC's website.
+     It includes sections for home, services, gallery, about, education, testimonials, and contact.
+     The form is set up to work with Netlify for handling submissions.
+     Make sure to update the links and images as necessary.
+      The thank-you page is linked to after form submission. -->
+      
+
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portillo Roofing LLC</title>
-  <meta name="description" content="Portillo Roofing LLC offers professional residential and commercial roofing services, specializing in full roof replacements with high-quality materials and expert craftsmanship." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="Images/favicon.png" type="image/png" />
+  <!-- Font Awesome Free 6 (CDN) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-pVn5x61Hqv2cTGf8vPiG7+0rhi8u+E4+Wl4N8ZD/uvf1/tfJq+1lXr0Cj/o8UJhMyjEPR6HZ2+Zqckd1w6r9Gg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Images/Favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
+  
+  
 <body>
-  <!-- Top Contact Bar -->
+  <!-- Top contact bar -->
   <div class="top-bar">
     <div class="container">
       <span class="top-text">
-        Affordable, high-quality roofing repair & replacement services—residential and commercial.
+        Affordable, High-Quality Professional Roofing Repair Services | Residential & Commercial.
       </span>
-      <a href="contact.html" class="contact-link">Contact Us</a>
-      <span class="phone"><i class="fas fa-phone"></i> (512) 629-1342</span>
+      <a href="contact.html" class="contact-link">Contact us today!</a>
+      <span class="phone">
+        <i class="fa fa-phone"></i> (512) 629-1342
+      </span>
     </div>
   </div>
 
-  <!-- Header / Navigation -->
+  <!-- Main navigation -->
   <header class="main-header">
     <div class="container">
-      <a href="index.html" class="logo">
-        <img src="Images/Updated_Logo.png" alt="Portillo Roofing Logo" />
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="Images/Updated_Logo.png" alt="Portillo Roofing">
       </a>
-      <nav class="primary-nav" role="navigation">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="about.html">About Us</a></li>
-          <li class="nav-item"><a href="services.html">Roof Replacement</a></li>
-          <li class="nav-item"><a href="blog.html">Blog</a></li>
-          <li class="nav-item"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="mobile-toggle" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
+
+      <!-- Primary nav (desktop + mobile) -->
+     <nav class="primary-nav">
+  <ul class="nav-list">
+    <li class="nav-item"><a href="index.html">Home</a></li>
+    <li class="nav-item"><a href="about.html">About Us</a></li>
+    <!-- Single Services link now points to a dedicated services page instead of a dropdown -->
+    <li class="nav-item"><a href="services.html">Services</a></li>
+    <!--<li class="nav-item"><a href="blog.html">Blog</a></li>-->
+    <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+      <!-- Mobile toggle -->
+      <button class="mobile-toggle">
+        <i class="fa fa-bars"></i>
       </button>
     </div>
   </header>
 
-  <!-- Hero / Slideshow -->
+  <!-- Your hero / rest of page… -->
+
+  <!-- JS: mobile navigation toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // mobile nav open/close
+      document.querySelector('.mobile-toggle').addEventListener('click', () => {
+        document.querySelector('.primary-nav').classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+
+  <!-- Hero / Slideshow Section -->
   <section id="home" class="hero">
     <div class="slideshow-container">
-      <div class="slide"><img src="Images/slide4.png" alt="New metal roof installation"></div>
-      <div class="slide"><img src="Images/slide2.png" alt="Residential shingle roofing"></div>
-      <div class="slide"><img src="Images/slide3.png" alt="Roof repair work"></div>
+      <div class="slide fade"><img src="Images/slide4.png" alt="Roof Slide 1"></div>
+      <div class="slide fade"><img src="Images/slide2.png" alt="Roof Slide 2"></div>
+      <div class="slide fade"><img src="Images/slide3.png" alt="Roof Slide 3"></div>
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+
     <div class="hero-overlay">
       <h1>Your Roof. Our Reputation.</h1>
-      <p>Expert roof replacement services you can trust.</p>
-      <a href="services.html" class="btn-primary">Learn More</a>
+      <p>Expert Roofing Services You Can Trust</p>
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
     </div>
+    <script>
+      /*
+        Image slider logic:
+        - Maintains a global slideIndex to track the current slide.
+        - showSlides(n) hides all slides and displays the selected one.
+        - plusSlides(n) adjusts the index and calls showSlides().
+        - An interval automatically advances the slides every 5 seconds.
+      */
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Navigate to the next/previous slide on arrow clicks
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Show the slide with the given index and hide others
+      function showSlides(n) {
+        const slides = document.getElementsByClassName("slide");
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        // hide all slides
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        // show current slide
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      // Automatically advance the slides every 5 seconds
+      setInterval(() => {
+        plusSlides(1);
+      }, 5000);
+    </script>
   </section>
 
   <!-- Services Section -->
-  <main class="container services-section">
-    <h1>Roof Replacement</h1>
-    <p>Give your property the best protection with a full roof replacement. Choose the option that fits your needs:</p>
-    <div class="grid">
-      <div class="card" id="roof-replacement-metal">
-        <h2>Premium Metal Replacement</h2>
+  <section id="services" class="services">
+    <div class="btn-container">
+      <h1>Our Services</h1>
+      <div class="grid">
+          <main class="container services-section" style="padding: 100px 15px 30px;">
+          <h2>Roof Replacement Services</h2>
+          <p>We specialize in complete roof replacements, tailored to your needs. Choose the best option below:</p>
+          <div class="grid">
+          <a href="contact.html?subject=Metal%20Roof%20Replacement" class="btn-primary">Request a Quote</a>
+
+          
+          <div class="card" id="roof-replacement-metal">
+        <h3>Premium Metal Replacement</h3>
         <ul>
-          <li><strong>40–50 Year Lifespan</strong> with minimal upkeep</li>
-          <li><strong>Superior Durability</strong> against hail, wind, fire & UV</li>
-          <li><strong>Energy Savings</strong> 20–25 % on cooling costs</li>
+          <li><strong>Budget-Friendly</strong> financing options available</li>
+          <li><strong>Fast Installation</strong> quick and easy process</li>
         </ul>
         <a href="contact.html?subject=Metal%20Roof%20Replacement" class="btn-primary">Request a Quote</a>
       </div>
-      <div class="card" id="roof-replacement-shingles">
-        <h2>Shingle Replacement</h2>
-        <ul>
-          <li><strong>Budget‑Friendly</strong> with quality architectural or three‑tab shingles</li>
-          <li><strong>15–25 Year Warranties</strong> on premium shingle lines</li>
-          <li><strong>Quick Installation</strong> to minimize disruption</li>
-        </ul>
-        <a href="contact.html?subject=Shingle%20Roof%20Replacement" class="btn-primary">Request a Quote</a>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Recent Projects</h2>
+      <div class="grid projects-grid">
+        <div class="project-item"><img src="Images/slide1.png" alt="Project 1"><p>Residential Roof</p></div>
+        <div class="project-item"><img src="Images/slide2.png" alt="Project 2"><p>Commercial Roof</p></div>
+        <div class="project-item"><img src="Images/slide3.png" alt="Project 3"><p>Storm Repair</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      Portillo Roofing LLC was founded with a clear purpose: to bring honesty, craftsmanship, and fairness back to the roofing industry.
+      After more than 25 years of subcontracting for a large company known for overcharging clients and underpaying workers,
+      <strong>Marco Portillo Sr.</strong> knew there had to be a better way — one built on respect, integrity, and community values.
+    </p>
+    <p>
+      Driven by that vision, Marco Sr. teamed up with his son to create a roofing company where quality work and ethical service go hand in hand.
+      Together, we bring a multigenerational approach to the trade, blending time-tested experience with fresh energy and relentless attention to detail.
+    </p>
+    <p>
+      We specialize in <strong>metal roofing</strong>, but our team is well-equipped and highly experienced in all roofing systems —
+      from composition shingles to commercial-grade flat roofs. Whether you need a full replacement, repair, or honest guidance,
+      we approach every job with care, precision, and open communication.
+    </p>
+    <p>
+      We’re not just here to put a roof over your head — we’re here to earn your trust, build lasting relationships,
+      and raise the bar for what a roofing company should be.
+    </p>
+   </div>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
-        <div class="form-group">
-          <input type="text" id="subject" name="subject" placeholder="Subject" />
-        </div>
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don’t fill this out: <input name="bot-field"></label></p>
+        <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+        <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
+        <div class="form-group"><textarea name="message" rows="5" placeholder="Your Message" required></textarea></div>
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
     </div>
@@ -111,11 +213,16 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Portillo Roofing LLC</p>
-      <p>Phone: (512) 629‑1342 | Email: customerservice@portillo-roofing.com</p>
+      <p>&copy; 2025 Portillo Roofing LLC. All rights reserved.</p>
+      <div class="footer-info"><p>Call us: (512) 629-1342</p><p>Email: customerservice@portillo-roofing.com</p></div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    navToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
+  </script>
 </body>
 </html>
