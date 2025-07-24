@@ -36,9 +36,22 @@
         <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
       </a>
 
-      <!-- copy in the same <nav> block from step 2 -->
-      <nav class="primary-nav">
-        …(nav-list from step 2)…
+      <!-- Site navigation -->
+      <nav class="primary-nav" role="navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">Our Services <span class="chevron">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#metal">Metal Roofing</a></li>
+              <li><a href="services.html#shingles">Shingle Roofing</a></li>
+              <li><a href="services.html#repairs">Repairs &amp; Maintenance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="blog.html">Blog</a></li>
+          <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+        </ul>
       </nav>
 
       <button class="mobile-toggle">
@@ -49,12 +62,26 @@
 
   <!-- Page-specific content -->
   <main class="container" style="padding: 100px 15px 30px;">
-    <h1>About Us</h1>
-    <p>
-      Portillo Roofing LLC was founded with a clear purpose: to bring honesty,
-      craftsmanship, and fairness back to the roofing industry. After more than 25 years …
-    </p>
-    <!-- …more about-us content… -->
+    <h1>Our Services</h1>
+    <p>We offer a full suite of roofing services for residential and commercial properties. Below are some of our most
+      popular offerings. Click on any service to learn more.</p>
+    <div class="grid">
+      <div class="card" id="metal">
+        <h2>Metal Roofing</h2>
+        <p>Durable and energy‑efficient metal roofing installed by experienced professionals to protect your home or business.
+          Our metal roofs come in a variety of colors and profiles to complement your architecture.</p>
+      </div>
+      <div class="card" id="shingles">
+        <h2>Shingle Roofing</h2>
+        <p>Traditional composition shingle roofs available in a range of styles and budgets. Let us help you select the
+          perfect shingle system for long‑lasting beauty and protection.</p>
+      </div>
+      <div class="card" id="repairs">
+        <h2>Repairs &amp; Maintenance</h2>
+        <p>From leak repair and patchwork to storm damage restoration, our repair and maintenance services extend the life
+          of your existing roof and keep small issues from turning into big problems.</p>
+      </div>
+    </div>
   </main>
 
   <!-- shared nav JS (dropdown + mobile toggle) -->

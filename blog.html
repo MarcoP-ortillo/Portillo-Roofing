@@ -36,9 +36,22 @@
         <img src="Images/Updated_Logo.png" alt="Portillo’s Roofing">
       </a>
 
-      <!-- copy in the same <nav> block from step 2 -->
-      <nav class="primary-nav">
-        …(nav-list from step 2)…
+      <!-- Site navigation -->
+      <nav class="primary-nav" role="navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle">Our Services <span class="chevron">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#metal">Metal Roofing</a></li>
+              <li><a href="services.html#shingles">Shingle Roofing</a></li>
+              <li><a href="services.html#repairs">Repairs &amp; Maintenance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="blog.html">Blog</a></li>
+          <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+        </ul>
       </nav>
 
       <button class="mobile-toggle">
@@ -49,12 +62,28 @@
 
   <!-- Page-specific content -->
   <main class="container" style="padding: 100px 15px 30px;">
-    <h1>About Us</h1>
-    <p>
-      Portillo Roofing LLC was founded with a clear purpose: to bring honesty,
-      craftsmanship, and fairness back to the roofing industry. After more than 25 years …
-    </p>
-    <!-- …more about-us content… -->
+    <h1>Blog</h1>
+    <p>Stay up to date with the latest roofing tips, tricks and company news. Our blog is full of information
+      to help you make informed decisions and keep your roof in top shape.</p>
+    <div class="grid">
+      <article class="card">
+        <h2>Choosing the Right Roofing Material</h2>
+        <p>Discover the pros and cons of metal, shingle and flat roofing systems so you can make an informed decision
+          for your home or business.</p>
+        <a href="#" class="btn-primary">Read More</a>
+      </article>
+      <article class="card">
+        <h2>How to Prepare Your Roof for Storm Season</h2>
+        <p>Learn practical tips for protecting your roof against hail, wind and heavy rain so your investment stays safe.</p>
+        <a href="#" class="btn-primary">Read More</a>
+      </article>
+      <article class="card">
+        <h2>The Benefits of Regular Roof Maintenance</h2>
+        <p>Regular inspections and upkeep can save you money in the long run. Here’s what you need to know to
+          prolong the life of your roof.</p>
+        <a href="#" class="btn-primary">Read More</a>
+      </article>
+    </div>
   </main>
 
   <!-- shared nav JS (dropdown + mobile toggle) -->
