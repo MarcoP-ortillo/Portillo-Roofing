@@ -428,19 +428,22 @@
         // Typed.js Animation
         document.addEventListener('DOMContentLoaded', function() {
             new Typed('#typed-text', {
-                strings: [
-                    'Your Roof. Our Reputation.',
-                    'Expert Roofing Services',
-                    'Quality You Can Trust',
-                    'Austin\'s Roofing Experts'
-                ],
-                typeSpeed: 60,
-                backSpeed: 30,
-                backDelay: 2000,
-                loop: true,
-                showCursor: true,
-                cursorChar: '|'
+            strings: [
+                'Your Roof. Our Reputation.',
+                'Expert Roofing Services',
+                'Quality You Can Trust',
+                "Austin's Roofing Experts"
+            ],
+            typeSpeed: 60,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
             });
+
+            // Ensure the typed text is burnt orange
+            document.getElementById('typed-text').style.color = '#CC5500';
         });
 
         // Scroll Animations

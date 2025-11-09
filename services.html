@@ -1,486 +1,106 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roofing Services - Portillo Roofing LLC</title>
-    <meta name="description" content="Comprehensive roofing services including metal roofing, shingle installation, repairs, and emergency services. Professional roofing contractor in Austin, TX.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Core Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Services – Portillo Roofing LLC</title>
+  <link
+   
+  />
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Images/Favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 <body>
-    <!-- Top Contact Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <span class="top-text">
-                <i class="fas fa-award"></i> 25+ Years Experience • Licensed & Insured • Free Estimates
-            </span>
-            <div class="flex" style="gap: 1rem;">
-                <a href="tel:5126291342" class="phone">
-                    <i class="fas fa-phone"></i> (512) 629-1342
-                </a>
-                <a href="contact.html" class="contact-link">
-                    <i class="fas fa-calendar"></i> Schedule Consultation
-                </a>
-            </div>
-        </div>
+  <!-- Top contact bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span class="top-text">
+        Affordable, High-Quality Professional Roofing Repair Services | Residential & Commercial.
+      </span>
+      <a href="contact.html" class="contact-link">Contact us today!</a>
+      <span class="phone">
+        <i class="fas fa-phone"></i> (512) 629-1342
+      </span>
+    </div>
+  </div>
+
+  <!-- Header and navigation -->
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="Images/Updated_Logo.png" alt="Portillo Roofing" />
+      </a>
+      <nav class="primary-nav" role="navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <!-- Single Services link instead of dropdown 
+          <li class="nav-item"><a href="blog.html">Blog</a></li> -->
+          <li class="nav-item"><a href="services.html">Services</a></li>
+          <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+<!-- Services content -->
+<main class="services-main">
+  <div class="container">
+    <h1>Roof Replacement</h1>
+    <p>Whether your existing roof has seen better days or suffered storm damage, a full roof replacement gives you a solid
+       foundation you can rely on for decades. Choose the option that best fits your goals and budget:</p>
+    <div class="grid">
+  <div class="grid">
+    <!-- Metal Roof Replacement -->
+    <div class="card" id="roof-replacement-metal">
+      <h2>Premium Metal Replacement</h2>
+      <p>We remove your old roof down to the deck and install a standing‑seam metal system that delivers:</p>
+      <ul>
+        <li><strong>Exceptional Longevity:</strong> Lasts 40–50 years or more, backed by industry‑leading warranties.</li>
+        <li><strong>Superior Durability:</strong> Resists hail, wind, fire and UV damage far better than asphalt.</li>
+        <li><strong>Energy Savings:</strong> Reflective coatings cut cooling bills by 20–25 %.</li>
+        <li><strong>Minimal Maintenance:</strong> No more cracked or curling shingles to replace.</li>
+      </ul>
+      <a href="contact.html?subject=Metal%20Roof%20Replacement" class="btn-primary">Request a Quote</a>
     </div>
 
-    <!-- Navigation -->
-    <header class="main-header">
-        <div class="container">
-            <a href="/" class="logo">
-                <h2 style="margin: 0; color: var(--primary-color); font-family: var(--font-secondary);">
-                    <i class="fas fa-home" style="color: var(--accent-color);"></i> Portillo Roofing
-                </h2>
-            </a>
-            
-            <nav class="primary-nav" id="primaryNav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html">Home</a></li>
-                    <li class="nav-item"><a href="about.html">About Us</a></li>
-                    <li class="nav-item"><a href="services.html" class="active">Services</a></li>
-                    <li class="nav-item"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
+    <!-- Shingle Roof Replacement -->
+    <div class="card" id="roof-replacement-shingles">
+      <h2>Premium Shingle Replacement</h2>
+      <p>For a budget‑friendly option, we’ll strip off your old shingles and underlayment, then install premium architectural
+         or three‑tab shingles that provide:</p>
+      <ul>
+        <li><strong>Affordability:</strong> Lower upfront cost with quality materials and a 15–25 year warranty.</li>
+        <li><strong>Speedy Installation:</strong> Get your new roof in place faster, minimizing disruption.</li>
+        <li><strong>Reliable Protection:</strong> Engineered to stand up to wind, rain and UV exposure.</li>
+      </ul>
+      <a href="contact.html?subject=Shingle%20Roof%20Replacement" class="btn-primary">Request a Quote</a>
+    </div>
+    <div class="card" id="repairs">
+        <h2>Repairs &amp; Maintenance</h2>
+        <p>From leak repair and patchwork to storm damage restoration, our repair and maintenance services extend the life
+          of your existing roof and keep small issues from turning into big problems.</p>
+        <a href="contact.html?subject=Repairs%20and%20Maintenance" class="btn-primary">Contact Us</a>
+    </div>
+  </div>
+</main>
+</main>
 
-    <!-- Hero Section -->
-    <section class="hero" style="height: 50vh; min-height: 400px;">
-        <div class="hero-background">
-            <img src="https://kimi-web-img.moonshot.cn/img/www.peakroofing-solar.com/771eff47d54c807b14974d422f958cd2c226e491.webp" alt="Roofing Services" loading="lazy">
-        </div>
-        <div class="hero-content">
-            <h1 style="font-size: clamp(2rem, 5vw, 3rem);">Comprehensive Roofing Services</h1>
-            <p style="font-size: 1.125rem; max-width: 600px; margin: 0 auto;">
-                From premium metal installations to emergency repairs, we deliver exceptional craftsmanship 
-                with premium materials and unmatched customer service.
-            </p>
-        </div>
-    </section>
 
-    <!-- Services Overview -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center animate-fadeInUp">
-                <h2>Choose the Perfect Roofing Solution</h2>
-                <p style="font-size: 1.125rem; color: var(--dark-gray); max-width: 700px; margin: 0 auto;">
-                    Whether your existing roof has seen better days or suffered storm damage, 
-                    we offer solutions that fit your goals, budget, and timeline.
-                </p>
-            </div>
-            
-            <div class="services-grid" style="margin-top: 3rem;">
-                <!-- Metal Roofing -->
-                <div class="service-card" id="metal-roofing">
-                    <img src="https://kimi-web-img.moonshot.cn/img/roofingintelligence.com/aaa599d172fe8d7e38fa04c96c18293aac72830a.jpg" alt="Metal Roofing Installation">
-                    <div class="service-content">
-                        <h3 class="service-title">
-                            <i class="fas fa-shield-alt" style="color: var(--accent-color);"></i>
-                            Premium Metal Roofing
-                        </h3>
-                        <p class="service-description">
-                            Transform your home with a standing-seam metal roof that delivers exceptional 
-                            longevity, durability, and energy efficiency. Perfect for Texas weather conditions.
-                        </p>
-                        
-                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
-                            <div class="card" style="padding: 1rem; background: var(--light-gray);">
-                                <div style="font-weight: 600; color: var(--primary-color);">Lifespan</div>
-                                <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold;">40-50+ Years</div>
-                            </div>
-                            <div class="card" style="padding: 1rem; background: var(--light-gray);">
-                                <div style="font-weight: 600; color: var(--primary-color);">Energy Savings</div>
-                                <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold;">20-25%</div>
-                            </div>
-                        </div>
-                        
-                        <ul class="service-features">
-                            <li><strong>Exceptional Longevity:</strong> Lasts 40-50+ years with minimal maintenance</li>
-                            <li><strong>Superior Durability:</strong> Resists hail, wind, fire, and UV damage</li>
-                            <li><strong>Energy Efficiency:</strong> Reflective coatings reduce cooling costs by 20-25%</li>
-                            <li><strong>Weather Resistant:</strong> Perfect for Texas climate conditions</li>
-                            <li><strong>Lifetime Warranty:</strong> Industry-leading manufacturer warranties</li>
-                            <li><strong>Professional Installation:</strong> Certified installation team</li>
-                        </ul>
-                        
-                        <div class="flex" style="gap: 1rem; margin-top: 1.5rem;">
-                            <a href="contact.html?service=metal-roofing" class="btn btn-primary">
-                                <i class="fas fa-calculator"></i>
-                                Get Quote
-                            </a>
-                            <a href="tel:5126291342" class="btn btn-outline">
-                                <i class="fas fa-phone"></i>
-                                Call Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Shingle Roofing -->
-                <div class="service-card" id="shingle-roofing">
-                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/0a0322460c9068ca2df2b1689d4ec3c00d27cd21.jpg" alt="Shingle Roof Installation">
-                    <div class="service-content">
-                        <h3 class="service-title">
-                            <i class="fas fa-home" style="color: var(--accent-color);"></i>
-                            Premium Shingle Roofing
-                        </h3>
-                        <p class="service-description">
-                            High-quality architectural shingles offering excellent protection at an affordable price. 
-                            Perfect balance of performance, aesthetics, and value.
-                        </p>
-                        
-                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
-                            <div class="card" style="padding: 1rem; background: var(--light-gray);">
-                                <div style="font-weight: 600; color: var(--primary-color);">Warranty</div>
-                                <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold;">25 Years</div>
-                            </div>
-                            <div class="card" style="padding: 1rem; background: var(--light-gray);">
-                                <div style="font-weight: 600; color: var(--primary-color);">Installation</div>
-                                <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold;">1-2 Days</div>
-                            </div>
-                        </div>
-                        
-                        <ul class="service-features">
-                            <li><strong>Affordable Excellence:</strong> Premium quality at competitive prices</li>
-                            <li><strong>Quick Installation:</strong> Most projects completed in 1-2 days</li>
-                            <li><strong>Multiple Styles:</strong> Wide range of colors and textures</li>
-                            <li><strong>Wind Resistance:</strong> Engineered for Texas storm conditions</li>
-                            <li><strong>Manufacturer Warranty:</strong> 25-year comprehensive coverage</li>
-                            <li><strong>Storm Specialists:</strong> Expert damage assessment and repair</li>
-                        </ul>
-                        
-                        <div class="flex" style="gap: 1rem; margin-top: 1.5rem;">
-                            <a href="contact.html?service=shingle-roofing" class="btn btn-primary">
-                                <i class="fas fa-calculator"></i>
-                                Get Quote
-                            </a>
-                            <a href="tel:5126291342" class="btn btn-outline">
-                                <i class="fas fa-phone"></i>
-                                Call Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Additional Services -->
-    <section class="section" style="background: var(--light-gray);">
-        <div class="container">
-            <div class="text-center animate-fadeInUp">
-                <h2>Additional Services</h2>
-                <p style="font-size: 1.125rem; color: var(--dark-gray); margin-bottom: 3rem;">
-                    Comprehensive roofing solutions for every situation.
-                </p>
-            </div>
-            
-            <div class="grid grid-3" style="gap: 2rem;">
-                <div class="card animate-fadeInLeft">
-                    <div class="card-body text-center">
-                        <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Emergency Repairs</h3>
-                        <p style="margin-bottom: 1.5rem; color: var(--dark-gray);">
-                            24/7 emergency response for storm damage, leaks, and urgent roofing issues. 
-                            Fast, reliable solutions when you need them most.
-                        </p>
-                        <ul style="text-align: left; margin-bottom: 1.5rem;">
-                            <li>24/7 emergency hotline</li>
-                            <li>Same-day temporary repairs</li>
-                            <li>Storm damage assessment</li>
-                            <li>Insurance claim assistance</li>
-                        </ul>
-                        <a href="tel:5126291342" class="btn btn-primary">
-                            <i class="fas fa-phone"></i>
-                            Emergency Line
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="card animate-fadeInUp">
-                    <div class="card-body text-center">
-                        <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Roof Inspections</h3>
-                        <p style="margin-bottom: 1.5rem; color: var(--dark-gray);">
-                            Comprehensive roof inspections to assess condition, identify issues, 
-                            and provide detailed reports for maintenance or insurance purposes.
-                        </p>
-                        <ul style="text-align: left; margin-bottom: 1.5rem;">
-                            <li>Free initial inspections</li>
-                            <li>Detailed condition reports</li>
-                            <li>Maintenance recommendations</li>
-                            <li>Insurance documentation</li>
-                        </ul>
-                        <a href="contact.html?service=inspection" class="btn btn-primary">
-                            <i class="fas fa-calendar"></i>
-                            Schedule Inspection
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="card animate-fadeInRight">
-                    <div class="card-body text-center">
-                        <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
-                            <i class="fas fa-file-invoice-dollar"></i>
-                        </div>
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Insurance Claims</h3>
-                        <p style="margin-bottom: 1.5rem; color: var(--dark-gray);">
-                            Expert assistance with insurance claims for storm damage. We work directly 
-                            with your insurance company to ensure you get fair coverage.
-                        </p>
-                        <ul style="text-align: left; margin-bottom: 1.5rem;">
-                            <li>Free damage assessment</li>
-                            <li>Insurance documentation</li>
-                            <li>Claim process guidance</li>
-                            <li>Direct insurance billing</li>
-                        </ul>
-                        <a href="contact.html?service=insurance" class="btn btn-primary">
-                            <i class="fas fa-handshake"></i>
-                            Get Help
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center animate-fadeInUp">
-                <h2>Why Homeowners Choose Portillo Roofing</h2>
-                <p style="font-size: 1.125rem; color: var(--dark-gray); margin-bottom: 3rem;">
-                    Our commitment to excellence sets us apart from other roofing contractors.
-                </p>
-            </div>
-            
-            <div class="grid grid-2" style="gap: 3rem; align-items: center;">
-                <div class="animate-fadeInLeft">
-                    <img src="https://kimi-web-img.moonshot.cn/img/www.improveitmd.com/a04f035cc509453435784c37dd5d4edc7b442a9d.webp" 
-                         alt="Professional Roofing Team" 
-                         style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-                </div>
-                
-                <div class="animate-fadeInRight">
-                    <div class="grid" style="gap: 1.5rem;">
-                        <div class="flex" style="gap: 1rem; align-items: flex-start;">
-                            <div style="width: 50px; height: 50px; background: var(--accent-color); color: var(--white); 
-                                        border-radius: 50%; display: flex; align-items: center; justify-content: center;
-                                        font-size: 1.25rem; flex-shrink: 0;">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">25+ Years Experience</h4>
-                                <p style="color: var(--dark-gray);">Decades of roofing expertise with thousands of successful installations across Central Texas.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex" style="gap: 1rem; align-items: flex-start;">
-                            <div style="width: 50px; height: 50px; background: var(--accent-color); color: var(--white); 
-                                        border-radius: 50%; display: flex; align-items: center; justify-content: center;
-                                        font-size: 1.25rem; flex-shrink: 0;">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Licensed & Insured</h4>
-                                <p style="color: var(--dark-gray);">Fully licensed, bonded, and insured for your protection and peace of mind.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex" style="gap: 1rem; align-items: flex-start;">
-                            <div style="width: 50px; height: 50px; background: var(--accent-color); color: var(--white); 
-                                        border-radius: 50%; display: flex; align-items: center; justify-content: center;
-                                        font-size: 1.25rem; flex-shrink: 0;">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Honest Pricing</h4>
-                                <p style="color: var(--dark-gray);">Transparent pricing with no hidden fees. Free, detailed quotes with multiple options.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex" style="gap: 1rem; align-items: flex-start;">
-                            <div style="width: 50px; height: 50px; background: var(--accent-color); color: var(--white); 
-                                        border-radius: 50%; display: flex; align-items: center; justify-content: center;
-                                        font-size: 1.25rem; flex-shrink: 0;">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">On-Time Completion</h4>
-                                <p style="color: var(--dark-gray);">We respect your time with scheduled start dates and completion timelines you can count on.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white);">
-        <div class="container text-center">
-            <div class="animate-fadeInUp">
-                <h2 style="color: var(--white);">Ready to Start Your Roofing Project?</h2>
-                <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Get a free, no-obligation quote from Austin's most trusted roofing professionals.
-                </p>
-                <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn btn-primary btn-lg">
-                        <i class="fas fa-calculator"></i>
-                        Free Quote
-                    </a>
-                    <a href="tel:5126291342" class="btn btn-outline btn-lg" style="color: var(--white); border-color: var(--white);">
-                        <i class="fas fa-phone"></i>
-                        (512) 629-1342
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Portillo Roofing LLC</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
-                        Professional roofing services in Austin, Texas. Licensed, insured, 
-                        and dedicated to excellence in every project.
-                    </p>
-                    <div style="margin-top: 1rem;">
-                        <div style="margin-bottom: 0.5rem;">
-                            <i class="fas fa-phone" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
-                            <a href="tel:5126291342" style="color: rgba(255, 255, 255, 0.8);">(512) 629-1342</a>
-                        </div>
-                        <div>
-                            <i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
-                            <a href="mailto:info@portillo-roofing.com" style="color: rgba(255, 255, 255, 0.8);">info@portillo-roofing.com</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#metal-roofing">Metal Roofing</a></li>
-                        <li><a href="#shingle-roofing">Shingle Roofing</a></li>
-                        <li><a href="#emergency-repairs">Emergency Repairs</a></li>
-                        <li><a href="#roof-inspections">Roof Inspections</a></li>
-                        <li><a href="#insurance-claims">Insurance Claims</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Service Areas</h3>
-                    <ul>
-                        <li>Austin, TX</li>
-                        <li>Round Rock, TX</li>
-                        <li>Cedar Park, TX</li>
-                        <li>Pflugerville, TX</li>
-                        <li>Georgetown, TX</li>
-                        <li>Leander, TX</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Business Hours</h3>
-                    <ul style="color: rgba(255, 255, 255, 0.8);">
-                        <li>Monday - Friday: 7:00 AM - 7:00 PM</li>
-                        <li>Saturday: 8:00 AM - 5:00 PM</li>
-                        <li>Sunday: Emergency Services Only</li>
-                        <li style="margin-top: 1rem; color: var(--accent-color);">
-                            <strong>24/7 Emergency Response</strong>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Portillo Roofing LLC. All rights reserved. | Licensed & Insured | 
-                <a href="privacy.html" style="color: var(--accent-color);">Privacy Policy</a> | 
-                <a href="terms.html" style="color: var(--accent-color);">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-        // Mobile Navigation Toggle
-        document.getElementById('mobileToggle').addEventListener('click', function() {
-            document.getElementById('primaryNav').classList.toggle('open');
-        });
-
-        // Smooth scrolling for service links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Scroll Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all animation elements
-        document.querySelectorAll('.animate-fadeInUp, .animate-fadeInLeft, .animate-fadeInRight').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-            observer.observe(el);
-        });
-
-        // Service Cards Stagger Animation
-        anime({
-            targets: '.service-card',
-            translateY: [50, 0],
-            opacity: [0, 1],
-            delay: anime.stagger(200),
-            duration: 800,
-            easing: 'easeOutQuad'
-        });
-    </script>
+  <!-- Navigation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mobile nav toggle
+      document.querySelector('.mobile-toggle').addEventListener('click', function () {
+        document.querySelector('.primary-nav').classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
+
+
+
