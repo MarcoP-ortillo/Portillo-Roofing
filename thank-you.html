@@ -1,69 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You - Portillo Roofing LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #1d1d1d;
-      text-align: center;
-      padding: 60px 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Portillo Roofing LLC</title>
+    <meta name="description" content="Thank you for contacting Portillo Roofing LLC. We'll respond to your inquiry within 24 hours.">
     
-    .logo {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-
-    .thank-you-container {
-      background-color: #ffffff;
-      border: 2px solid #1e2a45;
-      padding: 40px;
-      max-width: 600px;
-      margin: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      color: #1e2a45;
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-
-    a.button {
-      text-decoration: none;
-      color: white;
-      background-color: #1e2a45;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    a.button:hover {
-      background-color: #2f3e5c;
-    }
-  </style>
-  <link rel="icon" href="Images/favicon.png" type="image/png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span class="top-text">
+                <i class="fas fa-award"></i> 25+ Years Experience • Licensed & Insured • Free Estimates
+            </span>
+            <div class="flex" style="gap: 1rem;">
+                <a href="tel:5126291342" class="phone">
+                    <i class="fas fa-phone"></i> (512) 629-1342
+                </a>
+                <a href="contact.html" class="contact-link">
+                    <i class="fas fa-calendar"></i> Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </div>
 
-  <!-- Replace with your actual logo image path -->
-  <img src="Images/Updated_Logo.png" alt="Portillo Roofing LLC Logo" class="logo" />
+    <!-- Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <h2 style="margin: 0; color: var(--primary-color); font-family: var(--font-secondary);">
+                    <i class="fas fa-home" style="color: var(--accent-color);"></i> Portillo Roofing
+                </h2>
+            </a>
+            
+            <nav class="primary-nav" id="primaryNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-  <div class="thank-you-container">
-    <h1>Thank You for Reaching Out!</h1>
-    <p>Your message has been received. We appreciate your interest and will get back to you as soon as possible.</p>
-    <a href="/" class="button">Return to Home</a>
-  </div>
+    <!-- Thank You Content -->
+    <section class="section" style="min-height: 60vh; display: flex; align-items: center;">
+        <div class="container text-center">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="font-size: 4rem; color: var(--accent-color); margin-bottom: 2rem;">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                
+                <h1 style="color: var(--primary-color); margin-bottom: 1rem;">Thank You!</h1>
+                
+                <p style="font-size: 1.25rem; color: var(--dark-gray); margin-bottom: 2rem; line-height: 1.6;">
+                    We've received your message and appreciate your interest in Portillo Roofing LLC. 
+                    Our team will review your inquiry and respond within 24 hours.
+                </p>
+                
+                <div class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">What Happens Next?</h3>
+                    <div style="text-align: left; max-width: 400px; margin: 0 auto;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 30px; height: 30px; background: var(--accent-color); color: var(--white); 
+                                        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+                                        margin-right: 1rem; font-weight: bold;">1</div>
+                            <span>We'll review your project details</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 30px; height: 30px; background: var(--accent-color); color: var(--white); 
+                                        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+                                        margin-right: 1rem; font-weight: bold;">2</div>
+                            <span>Contact you within 24 hours</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 30px; height: 30px; background: var(--accent-color); color: var(--white); 
+                                        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+                                        margin-right: 1rem; font-weight: bold;">3</div>
+                            <span>Schedule a free consultation</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div style="width: 30px; height: 30px; background: var(--accent-color); color: var(--white); 
+                                        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+                                        margin-right: 1rem; font-weight: bold;">4</div>
+                            <span>Provide a detailed quote</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Need Immediate Help?</h4>
+                    <p style="color: var(--dark-gray); margin-bottom: 1.5rem;">
+                        For emergencies or urgent questions, don't hesitate to call us directly.
+                    </p>
+                    <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
+                        <a href="tel:5126291342" class="btn btn-primary btn-lg">
+                            <i class="fas fa-phone"></i>
+                            (512) 629-1342
+                        </a>
+                        <a href="index.html" class="btn btn-outline btn-lg">
+                            <i class="fas fa-home"></i>
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+                
+                <div style="color: var(--dark-gray); font-size: 0.9rem;">
+                    <p>Business Hours: Monday-Friday 7AM-7PM, Saturday 8AM-5PM</p>
+                    <p style="color: var(--accent-color); font-weight: 600;">24/7 Emergency Service Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Portillo Roofing LLC</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
+                        Professional roofing services in Austin, Texas. Licensed, insured, 
+                        and dedicated to excellence in every project.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <div style="margin-bottom: 0.5rem;">
+                            <i class="fas fa-phone" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                            <a href="tel:5126291342" style="color: rgba(255, 255, 255, 0.8);">(512) 629-1342</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                            <a href="mailto:info@portillo-roofing.com" style="color: rgba(255, 255, 255, 0.8);">info@portillo-roofing.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#metal-roofing">Metal Roofing</a></li>
+                        <li><a href="services.html#shingle-roofing">Shingle Roofing</a></li>
+                        <li><a href="services.html#emergency-repairs">Emergency Repairs</a></li>
+                        <li><a href="services.html#roof-inspections">Roof Inspections</a></li>
+                        <li><a href="services.html#insurance-claims">Insurance Claims</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Austin, TX</li>
+                        <li>Round Rock, TX</li>
+                        <li>Cedar Park, TX</li>
+                        <li>Pflugerville, TX</li>
+                        <li>Georgetown, TX</li>
+                        <li>Leander, TX</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <ul style="color: rgba(255, 255, 255, 0.8);">
+                        <li>Monday - Friday: 7:00 AM - 7:00 PM</li>
+                        <li>Saturday: 8:00 AM - 5:00 PM</li>
+                        <li>Sunday: Emergency Services Only</li>
+                        <li style="margin-top: 1rem; color: var(--accent-color);">
+                            <strong>24/7 Emergency Response</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Portillo Roofing LLC. All rights reserved. | Licensed & Insured | 
+                <a href="privacy.html" style="color: var(--accent-color);">Privacy Policy</a> | 
+                <a href="terms.html" style="color: var(--accent-color);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Navigation Toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('primaryNav').classList.toggle('open');
+        });
+
+        // Auto-redirect after 10 seconds
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 10000);
+
+        // Add countdown timer
+        let countdown = 10;
+        const countdownElement = document.createElement('div');
+        countdownElement.style.cssText = 'margin-top: 1rem; color: var(--dark-gray); font-size: 0.9rem;';
+        countdownElement.innerHTML = 'Redirecting to home page in <span id="countdown">10</span> seconds...';
+        
+        const contentDiv = document.querySelector('.container.text-center > div');
+        contentDiv.appendChild(countdownElement);
+        
+        const countdownSpan = document.getElementById('countdown');
+        const timer = setInterval(function() {
+            countdown--;
+            countdownSpan.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
