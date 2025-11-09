@@ -1,228 +1,516 @@
-<!-- This is the main HTML file for Portillo Roofing LLC's website.
-     It includes sections for home, services, gallery, about, education, testimonials, and contact.
-     The form is set up to work with Netlify for handling submissions.
-     Make sure to update the links and images as necessary.
-      The thank-you page is linked to after form submission. -->
-      
-
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portillo Roofing LLC</title>
-  <!-- Font Awesome Free 6 (CDN) -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-pVn5x61Hqv2cTGf8vPiG7+0rhi8u+E4+Wl4N8ZD/uvf1/tfJq+1lXr0Cj/o8UJhMyjEPR6HZ2+Zqckd1w6r9Gg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="Images/Favicon.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portillo Roofing LLC - Expert Roofing Services You Can Trust</title>
+    <meta name="description" content="Professional roofing services in Austin, TX. Expert roof replacement, repairs, and installations. 25+ years of experience. Free quotes available.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js"></script>
+    <link href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
 </head>
-  
-  
 <body>
-  <!-- Top contact bar -->
-  <div class="top-bar">
-    <div class="container">
-      <span class="top-text">
-        Affordable, High-Quality Professional Roofing Repair Services | Residential & Commercial.
-      </span>
-      <a href="contact.html" class="contact-link">Contact us today!</a>
-      <span class="phone">
-        <i class="fa fa-phone"></i> (512) 629-1342
-      </span>
-    </div>
-  </div>
-
-  <!-- Main navigation -->
-  <header class="main-header">
-    <div class="container">
-      <!-- Logo -->
-      <a href="/" class="logo">
-        <img src="Images/Updated_Logo.png" alt="Portillo Roofing">
-      </a>
-
-      <!-- Primary nav (desktop + mobile) -->
-     <nav class="primary-nav">
-  <ul class="nav-list">
-    <li class="nav-item"><a href="index.html">Home</a></li>
-    <li class="nav-item"><a href="about.html">About Us</a></li>
-    <!-- Single Services link now points to a dedicated services page instead of a dropdown -->
-    <li class="nav-item"><a href="services.html">Services</a></li>
-    <!--<li class="nav-item"><a href="blog.html">Blog</a></li>-->
-    <li class="nav-item"><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>
-
-      <!-- Mobile toggle -->
-      <button class="mobile-toggle">
-        <i class="fa fa-bars"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- Your hero / rest of page… -->
-
-  <!-- JS: mobile navigation toggle -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // mobile nav open/close
-      document.querySelector('.mobile-toggle').addEventListener('click', () => {
-        document.querySelector('.primary-nav').classList.toggle('open');
-      });
-    });
-  </script>
-
-</body>
-
-  <!-- Hero / Slideshow Section -->
-  <section id="home" class="hero">
-    <div class="slideshow-container">
-      <div class="slide fade"><img src="Images/slide4.png" alt="Roof Slide 1"></div>
-      <div class="slide fade"><img src="Images/slide2.png" alt="Roof Slide 2"></div>
-      <div class="slide fade"><img src="Images/slide3.png" alt="Roof Slide 3"></div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span class="top-text">
+                <i class="fas fa-award"></i> 25+ Years Experience • Licensed & Insured • Free Estimates
+            </span>
+            <div class="flex" style="gap: 1rem;">
+                <a href="tel:5126291342" class="phone">
+                    <i class="fas fa-phone"></i> (512) 629-1342
+                </a>
+                <a href="contact.html" class="contact-link">
+                    <i class="fas fa-calendar"></i> Schedule Consultation
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="hero-overlay">
-      <h1>Your Roof. Our Reputation.</h1>
-      <p>Expert Roofing Services You Can Trust</p>
-      <a href="#contact" class="btn-primary">Get a Free Quote</a>
-    </div>
+    <!-- Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <h2 style="margin: 0; color: var(--primary-color); font-family: var(--font-secondary);">
+                    <i class="fas fa-home" style="color: var(--accent-color);"></i> Portillo Roofing
+                </h2>
+            </a>
+            
+            <nav class="primary-nav" id="primaryNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="https://kimi-web-img.moonshot.cn/img/www.peakroofing-solar.com/771eff47d54c807b14974d422f958cd2c226e491.webp" alt="Professional Roofing Installation" loading="lazy">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span id="typed-text"></span>
+            </h1>
+            <p class="hero-subtitle">
+                Protecting homes and businesses across Austin, Texas with premium roofing solutions backed by decades of craftsmanship and unwavering integrity.
+            </p>
+            <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary btn-lg hero-cta">
+                    <i class="fas fa-calculator"></i>
+                    Get Free Quote
+                </a>
+                <a href="tel:5126291342" class="btn btn-outline btn-lg hero-cta">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                </a>
+            </div>
+            <div class="flex-center" style="margin-top: 2rem; gap: 2rem; color: var(--white);">
+                <div class="text-center">
+                    <div style="font-size: 2rem; font-weight: bold;">25+</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">Years Experience</div>
+                </div>
+                <div class="text-center">
+                    <div style="font-size: 2rem; font-weight: bold;">1000+</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">Roofs Completed</div>
+                </div>
+                <div class="text-center">
+                    <div style="font-size: 2rem; font-weight: bold;">5★</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">Customer Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="text-center animate-fadeInUp">
+                <h2>Our Premium Roofing Services</h2>
+                <p style="font-size: 1.125rem; color: var(--dark-gray); max-width: 600px; margin: 0 auto;">
+                    From complete roof replacements to emergency repairs, we deliver exceptional craftsmanship 
+                    with premium materials and unmatched customer service.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate-fadeInLeft">
+                    <img src="https://kimi-web-img.moonshot.cn/img/roofingintelligence.com/aaa599d172fe8d7e38fa04c96c18293aac72830a.jpg" alt="Metal Roofing Installation">
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <i class="fas fa-shield-alt" style="color: var(--accent-color);"></i>
+                            Metal Roof Installation
+                        </h3>
+                        <p class="service-description">
+                            Premium standing-seam metal roofing systems that last 40-50+ years. Energy-efficient, 
+                            fire-resistant, and backed by industry-leading warranties.
+                        </p>
+                        <ul class="service-features">
+                            <li>Lifetime warranty available</li>
+                            <li>Energy Star certified materials</li>
+                            <li>Professional installation team</li>
+                            <li>Financing options available</li>
+                        </ul>
+                        <a href="contact.html?service=metal-roofing" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-fadeInUp">
+                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/0a0322460c9068ca2df2b1689d4ec3c00d27cd21.jpg" alt="Shingle Roof Replacement">
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <i class="fas fa-home" style="color: var(--accent-color);"></i>
+                            Shingle Roof Replacement
+                        </h3>
+                        <p class="service-description">
+                            High-quality architectural shingles with superior wind resistance and weather protection. 
+                            Affordable excellence for every home.
+                        </p>
+                        <ul class="service-features">
+                            <li>25-year manufacturer warranty</li>
+                            <li>Multiple color options</li>
+                            <li>Quick installation process</li>
+                            <li>Storm damage specialists</li>
+                        </ul>
+                        <a href="contact.html?service=shingle-roofing" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate-fadeInRight">
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.kinoroofing.com/418f523ae4c23b8531e026e629454354d6197d45.png" alt="Roof Repair Services">
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <i class="fas fa-tools" style="color: var(--accent-color);"></i>
+                            Emergency Repairs
+                        </h3>
+                        <p class="service-description">
+                            24/7 emergency roof repair services for storm damage, leaks, and urgent roofing issues. 
+                            Fast response, permanent solutions.
+                        </p>
+                        <ul class="service-features">
+                            <li>24/7 emergency response</li>
+                            <li>Free damage assessment</li>
+                            <li>Insurance claim assistance</li>
+                            <li>Same-day temporary repairs</li>
+                        </ul>
+                        <a href="tel:5126291342" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="animate-fadeInLeft">
+                    <h2>Why Choose Portillo Roofing?</h2>
+                    <div class="about-text">
+                        <p>
+                            <strong>Portillo Roofing LLC</strong> was founded with a clear mission: to bring honesty, 
+                            craftsmanship, and fairness back to the roofing industry. After 25+ years of experience, 
+                            we understand that your roof is more than just protection—it's an investment in your 
+                            home's future and your family's safety.
+                        </p>
+                        <p>
+                            Led by Marco Portillo Sr. and his son, our multigenerational team combines time-tested 
+                            experience with fresh energy and relentless attention to detail. We specialize in metal 
+                            roofing but are highly experienced in all roofing systems.
+                        </p>
+                        <p>
+                            We're not just here to put a roof over your head—we're here to earn your trust, 
+                            build lasting relationships, and raise the bar for what a roofing company should be.
+                        </p>
+                    </div>
+                    <div class="flex" style="gap: 1rem; margin-top: 2rem;">
+                        <div class="text-center">
+                            <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">25+</div>
+                            <div style="color: var(--dark-gray);">Years in Business</div>
+                        </div>
+                        <div class="text-center">
+                            <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">1000+</div>
+                            <div style="color: var(--dark-gray);">Happy Customers</div>
+                        </div>
+                        <div class="text-center">
+                            <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">100%</div>
+                            <div style="color: var(--dark-gray);">Satisfaction Rate</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image animate-fadeInRight">
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.improveitmd.com/a04f035cc509453435784c37dd5d4edc7b442a9d.webp" alt="Professional Roofing Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="text-center animate-fadeInUp">
+                <h2>Recent Projects</h2>
+                <p style="font-size: 1.125rem; color: var(--dark-gray); max-width: 600px; margin: 0 auto;">
+                    See the quality and craftsmanship that sets Portillo Roofing apart. 
+                    Each project showcases our commitment to excellence.
+                </p>
+            </div>
+            
+            <div class="projects-grid" id="projectsGallery">
+                <div class="project-item">
+                    <img src="https://kimi-web-img.moonshot.cn/img/roofsbyrhino.com/049db49b2df36a1e5496148b11535df30ae73a54.jpg" alt="Metal Roof Project">
+                    <div class="project-overlay">
+                        <h4>Metal Roof Installation</h4>
+                        <p>Residential • Austin, TX</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://kimi-web-img.moonshot.cn/img/roof-elite.com/b39138b9b6b61937282fa45679a504eedf623c8f.jpg" alt="Shingle Roof Project">
+                    <div class="project-overlay">
+                        <h4>Shingle Replacement</h4>
+                        <p>Residential • Round Rock, TX</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://kimi-web-img.moonshot.cn/img/elorenergy.com/51d49913c661e21938946fb11ee53f12bfbe371a.jpg" alt="Commercial Project">
+                    <div class="project-overlay">
+                        <h4>Commercial Roofing</h4>
+                        <p>Commercial • Austin, TX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="text-center animate-fadeInUp">
+                <h2>What Our Customers Say</h2>
+                <p style="font-size: 1.125rem; color: var(--dark-gray); margin-bottom: 3rem;">
+                    Don't just take our word for it—hear from satisfied homeowners across Austin.
+                </p>
+            </div>
+            
+            <div class="grid grid-3" style="gap: 2rem;">
+                <div class="card animate-fadeInLeft">
+                    <div class="card-body">
+                        <div style="color: var(--accent-color); font-size: 2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">
+                            "Portillo Roofing transformed our home with a beautiful metal roof. 
+                            Professional, punctual, and the quality is outstanding. Highly recommended!"
+                        </p>
+                        <div style="font-weight: 600; color: var(--primary-color);">
+                            — Sarah Johnson, Austin, TX
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card animate-fadeInUp">
+                    <div class="card-body">
+                        <div style="color: var(--accent-color); font-size: 2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">
+                            "After the storm, they responded immediately. Fixed our roof quickly 
+                            and worked with our insurance. Couldn't ask for better service."
+                        </p>
+                        <div style="font-weight: 600; color: var(--primary-color);">
+                            — Mike Rodriguez, Round Rock, TX
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card animate-fadeInRight">
+                    <div class="card-body">
+                        <div style="color: var(--accent-color); font-size: 2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">
+                            "Honest, reliable, and fairly priced. The Portillo team delivered 
+                            exactly what they promised. Our new roof looks fantastic!"
+                        </p>
+                        <div style="font-weight: 600; color: var(--primary-color);">
+                            — Jennifer Chen, Cedar Park, TX
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white);">
+        <div class="container text-center">
+            <div class="animate-fadeInUp">
+                <h2 style="color: var(--white);">Ready to Start Your Roofing Project?</h2>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Get a free, no-obligation quote from Austin's most trusted roofing professionals.
+                </p>
+                <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calculator"></i>
+                        Free Quote
+                    </a>
+                    <a href="tel:5126291342" class="btn btn-outline btn-lg" style="color: var(--white); border-color: var(--white);">
+                        <i class="fas fa-phone"></i>
+                        (512) 629-1342
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Portillo Roofing LLC</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
+                        Professional roofing services in Austin, Texas. Licensed, insured, 
+                        and dedicated to excellence in every project.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <div style="margin-bottom: 0.5rem;">
+                            <i class="fas fa-phone" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                            <a href="tel:5126291342" style="color: rgba(255, 255, 255, 0.8);">(512) 629-1342</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                            <a href="mailto:info@portillo-roofing.com" style="color: rgba(255, 255, 255, 0.8);">info@portillo-roofing.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#metal-roofing">Metal Roofing</a></li>
+                        <li><a href="services.html#shingle-roofing">Shingle Roofing</a></li>
+                        <li><a href="services.html#roof-repair">Roof Repairs</a></li>
+                        <li><a href="services.html#emergency-services">Emergency Services</a></li>
+                        <li><a href="services.html#insurance-claims">Insurance Claims</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Austin, TX</li>
+                        <li>Round Rock, TX</li>
+                        <li>Cedar Park, TX</li>
+                        <li>Pflugerville, TX</li>
+                        <li>Georgetown, TX</li>
+                        <li>Leander, TX</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <ul style="color: rgba(255, 255, 255, 0.8);">
+                        <li>Monday - Friday: 7:00 AM - 7:00 PM</li>
+                        <li>Saturday: 8:00 AM - 5:00 PM</li>
+                        <li>Sunday: Emergency Services Only</li>
+                        <li style="margin-top: 1rem; color: var(--accent-color);">
+                            <strong>24/7 Emergency Response</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Portillo Roofing LLC. All rights reserved. | Licensed & Insured | 
+                <a href="privacy.html" style="color: var(--accent-color);">Privacy Policy</a> | 
+                <a href="terms.html" style="color: var(--accent-color);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script>
-      /*
-        Image slider logic:
-        - Maintains a global slideIndex to track the current slide.
-        - showSlides(n) hides all slides and displays the selected one.
-        - plusSlides(n) adjusts the index and calls showSlides().
-        - An interval automatically advances the slides every 5 seconds.
-      */
-      let slideIndex = 1;
-      showSlides(slideIndex);
+        // Mobile Navigation Toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('primaryNav').classList.toggle('open');
+        });
 
-      // Navigate to the next/previous slide on arrow clicks
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
+        // Typed.js Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            new Typed('#typed-text', {
+                strings: [
+                    'Your Roof. Our Reputation.',
+                    'Expert Roofing Services',
+                    'Quality You Can Trust',
+                    'Austin\'s Roofing Experts'
+                ],
+                typeSpeed: 60,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|'
+            });
+        });
 
-      // Show the slide with the given index and hide others
-      function showSlides(n) {
-        const slides = document.getElementsByClassName("slide");
-        if (n > slides.length) slideIndex = 1;
-        if (n < 1) slideIndex = slides.length;
-        // hide all slides
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        // show current slide
-        slides[slideIndex - 1].style.display = "block";
-      }
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-      // Automatically advance the slides every 5 seconds
-      setInterval(() => {
-        plusSlides(1);
-      }, 5000);
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animation elements
+        document.querySelectorAll('.animate-fadeInUp, .animate-fadeInLeft, .animate-fadeInRight').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Project Gallery Hover Effects
+        document.querySelectorAll('.project-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                anime({
+                    targets: this.querySelector('img'),
+                    scale: 1.1,
+                    duration: 600,
+                    easing: 'easeOutQuad'
+                });
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                anime({
+                    targets: this.querySelector('img'),
+                    scale: 1,
+                    duration: 600,
+                    easing: 'easeOutQuad'
+                });
+            });
+        });
+
+        // Service Cards Stagger Animation
+        anime({
+            targets: '.service-card',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            delay: anime.stagger(200),
+            duration: 800,
+            easing: 'easeOutQuad'
+        });
     </script>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="btn-container">
-      <h1>Our Services</h1>
-      <div class="grid">
-          <main class="container services-section" style="padding: 100px 15px 30px;">
-          <h2>Roof Replacement Services</h2>
-          <p>We specialize in complete roof replacements, tailored to your needs. Choose the best option below:</p>
-          <div class="grid">
-          <a href="contact.html?subject=Metal%20Roof%20Replacement" class="btn-primary">Request a Quote</a>
-
-          
-          <div class="card" id="roof-replacement-metal">
-        <h3>Premium Metal Replacement</h3>
-        <ul>
-          <li><strong>Budget-Friendly</strong> financing options available</li>
-          <li><strong>Fast Installation</strong> quick and easy process</li>
-        </ul>
-        <a href="contact.html?subject=Metal%20Roof%20Replacement" class="btn-primary">Request a Quote</a>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Recent Projects</h2>
-      <div class="grid projects-grid">
-        <div class="project-item"><img src="Images/slide1.png" alt="Project 1"><p>Residential Roof</p></div>
-        <div class="project-item"><img src="Images/slide2.png" alt="Project 2"><p>Commercial Roof</p></div>
-        <div class="project-item"><img src="Images/slide3.png" alt="Project 3"><p>Storm Repair</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p>
-      Portillo Roofing LLC was founded with a clear purpose: to bring honesty, craftsmanship, and fairness back to the roofing industry.
-      After more than 25 years of subcontracting for a large company known for overcharging clients and underpaying workers,
-      <strong>Marco Portillo Sr.</strong> knew there had to be a better way — one built on respect, integrity, and community values.
-    </p>
-    <p>
-      Driven by that vision, Marco Sr. teamed up with his son to create a roofing company where quality work and ethical service go hand in hand.
-      Together, we bring a multigenerational approach to the trade, blending time-tested experience with fresh energy and relentless attention to detail.
-    </p>
-    <p>
-      We specialize in <strong>metal roofing</strong>, but our team is well-equipped and highly experienced in all roofing systems —
-      from composition shingles to commercial-grade flat roofs. Whether you need a full replacement, repair, or honest guidance,
-      we approach every job with care, precision, and open communication.
-    </p>
-    <p>
-      We’re not just here to put a roof over your head — we’re here to earn your trust, build lasting relationships,
-      and raise the bar for what a roofing company should be.
-    </p>
-   </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
-        <input type="hidden" name="form-name" value="contact">
-        <p hidden><label>Don’t fill this out: <input name="bot-field"></label></p>
-        <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
-        <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
-        <div class="form-group"><textarea name="message" rows="5" placeholder="Your Message" required></textarea></div>
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Portillo Roofing LLC. All rights reserved.</p>
-      <div class="footer-info"><p>Call us: (512) 629-1342</p><p>Email: customerservice@portillo-roofing.com</p></div>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const siteNav = document.querySelector('.site-nav');
-    navToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
-  </script>
 </body>
 </html>
