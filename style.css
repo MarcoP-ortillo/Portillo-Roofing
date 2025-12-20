@@ -420,6 +420,50 @@ a:hover {
     font-size: 1.125rem;
     padding: var(--space-md) var(--space-xl);
 }
+/* BBB Badge – Hero */
+.hero {
+    position: relative; /* allows absolute positioning inside */
+}
+
+.bbb-hero-badge {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+    display: inline-block;
+    z-index: 5;
+}
+
+.bbb-hero-badge img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+/* Make sure it doesn't crowd small screens */
+@media (max-width: 768px) {
+    .bbb-hero-badge {
+        position: static;
+        margin: 1.5rem auto 0;
+        text-align: center;
+    }
+}
+
+/* BBB Badge – Footer */
+.footer-bbb {
+    margin-top: 1.25rem;
+}
+
+.footer-bbb img {
+    max-width: 200px;
+    height: auto;
+    border: 0;
+    display: block;
+}
 
 /* Services Section */
 .services-section {
