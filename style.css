@@ -808,11 +808,15 @@ a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Nav switches to the mobile off-canvas menu earlier than the general 768px
+   breakpoint below — with 6 nav items, the desktop nav row no longer fits
+   next to the logo until around 1200px, so it would otherwise wrap and
+   overlap the header on tablet / small-laptop widths. */
+@media (max-width: 1200px) {
     .mobile-toggle {
         display: block;
     }
-    
+
     .primary-nav {
         position: fixed;
         top: 0;
@@ -824,23 +828,25 @@ a:hover {
         transition: var(--transition-normal);
         z-index: 1001;
     }
-    
+
     .primary-nav.open {
         right: 0;
     }
-    
+
     .primary-nav .nav-list {
         flex-direction: column;
         padding: var(--space-2xl) var(--space-lg);
         gap: var(--space-md);
     }
-    
+
     .primary-nav .nav-item a {
         display: block;
         padding: var(--space-md);
         border-bottom: 1px solid var(--light-gray);
     }
-    
+}
+
+@media (max-width: 768px) {
     .hero {
         height: 80vh;
         min-height: 500px;
