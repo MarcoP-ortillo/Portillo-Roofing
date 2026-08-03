@@ -565,6 +565,18 @@ a:hover {
     object-fit: cover;
 }
 
+/* Crew Section */
+.crew-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.25rem;
+    border: 4px solid var(--light-gray);
+    background: var(--light-gray);
+}
+
 /* Projects Section */
 .projects-section {
     background: var(--light-gray);

@@ -54,7 +54,9 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="active">About Us</a></li>
+                    <li class="nav-item"><a href="about.html#crew">Meet the Crew</a></li>
                     <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
                     <li class="nav-item"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -68,7 +70,7 @@
     <!-- Hero Section -->
     <section class="hero" style="height: 50vh; min-height: 400px;">
         <div class="hero-background">
-            <img src="https://kimi-web-img.moonshot.cn/img/www.improveitmd.com/a04f035cc509453435784c37dd5d4edc7b442a9d.webp" alt="About Portillo Roofing" loading="lazy">
+            <img src="Images/hero-placeholder.svg" alt="About Portillo Roofing" loading="lazy">
         </div>
         <div class="hero-content">
             <h1 style="font-size: clamp(2rem, 5vw, 3rem);">About Portillo Roofing</h1>
@@ -85,44 +87,92 @@
             <div class="grid grid-2" style="gap: 3rem; align-items: center;">
                 <div class="animate-fadeInLeft">
                     <h2>Our Story</h2>
-                    <div style="font-size: 1.125rem; line-height: 1.7; color: var(--dark-gray);">
-                        <p style="margin-bottom: 1.5rem;">
-                            <strong>Portillo Roofing LLC</strong> was founded with a clear mission: to bring honesty, 
-                            craftsmanship, and fairness back to the roofing industry. After more than 25 years of 
-                            subcontracting for large companies known for overcharging clients and underpaying workers, 
-                            <strong>Marco Portillo Sr.</strong> knew there had to be a better way—one built on respect, 
-                            integrity, and community values.
-                        </p>
-                        
-                        <p style="margin-bottom: 1.5rem;">
-                            Driven by that vision, Marco Sr. teamed up with his son to create a roofing company where 
-                            quality work and ethical service go hand in hand. Together, we bring a multigenerational 
-                            approach to the trade, blending time-tested experience with fresh energy and relentless 
-                            attention to detail.
-                        </p>
-                        
-                        <p style="margin-bottom: 1.5rem;">
-                            We specialize in <strong>metal roofing</strong>, but our team is well-equipped and highly 
-                            experienced in all roofing systems—from composition shingles to commercial-grade flat roofs. 
-                            Whether you need a full replacement, repair, or honest guidance, we approach every job 
-                            with care, precision, and open communication.
-                        </p>
-                        
-                        <p>
-                            We're not just here to put a roof over your head—we're here to earn your trust, 
-                            build lasting relationships, and raise the bar for what a roofing company should be.
-                        </p>
-                    </div>
+
+                    <p style="margin-bottom: 1.5rem;">
+                        <strong>Portillo Roofing LLC</strong> was founded on a simple principle:
+                        deliver exceptional craftsmanship, honest pricing, and treat people with respect.
+                        After more than 25 years of subcontracting for large roofing companies,
+                        <strong>Marco Portillo Sr.</strong> recognized the need for a better approach—
+                        one built on integrity, transparency, and a genuine commitment to the communities we serve.
+                    </p>
+
+                    <p style="margin-bottom: 1.5rem;">
+                        Through patience, perseverance, and a lifetime dedicated to the trade,
+                        Marco Sr. built a reputation founded on trust and quality workmanship.
+                        Those values became the cornerstone of Portillo Roofing LLC and continue to guide every project we undertake.
+                    </p>
+
+                    <p style="margin-bottom: 1.5rem;">
+                        Today, I am proud to continue that legacy. Growing up around the roofing industry,
+                        I learned early that trust is earned through hard work, clear communication,
+                        and doing what is right even when no one is watching. Those principles carried me throughout my education
+                        and ultimately led me to earn my Master's degree in Mechanical Engineering from
+                        <strong>The University of Texas at Austin.</strong>
+                    </p>
+
+                    <p>
+                        By combining generations of hands-on roofing experience with engineering-driven problem solving,
+                        we strive to deliver solutions that are built to last and relationships that stand the test of time.
+                    </p>
                 </div>
-                
+
                 <div class="animate-fadeInRight">
-                    <img src="https://kimi-web-img.moonshot.cn/img/www.skabelundroofingut.com/5ea2afb4a8309a06aa2647c1c9df365c3310c5a6.jpg" 
-                         alt="Marco Portillo Sr. and Team" 
+                    <img src="Images/photo-placeholder.svg"
+                         alt="Marco Portillo Sr. and Team"
                          style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
                     <div style="text-align: center; margin-top: 1rem; font-style: italic; color: var(--dark-gray);">
                         Marco Portillo Sr. and the Portillo Roofing team
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Crew -->
+    <section id="crew" class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="text-center animate-fadeInUp">
+                <h2>Meet the Crew</h2>
+                <p style="font-size: 1.125rem; color: var(--dark-gray); max-width: 650px; margin: 0 auto;">
+                    The people behind every roof we install — from the founders to the crew on the ladder.
+                </p>
+            </div>
+
+            <div class="grid grid-3" id="crewGrid" style="gap: 2rem; margin-top: 3rem;">
+                <!-- Populated by script below from the crewMembers array -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="section">
+        <div class="container">
+            <div class="text-center animate-fadeInUp">
+                <h2>Looking Toward the Future</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; color: var(--dark-gray); font-size: 1.125rem; line-height: 1.7;">
+                <p style="margin-bottom: 1.5rem;">
+                    While roofing remains our foundation, our vision extends far beyond installing
+                    shingles and metal panels.
+                </p>
+
+                <p style="margin-bottom: 1.5rem;">
+                    We believe homes should be stronger, more efficient, and more sustainable.
+                    Our long-term mission is to explore innovative ways to improve how people live by
+                    rethinking the relationship between shelter, materials, energy, and the communities we build around them.
+                </p>
+
+                <p style="margin-bottom: 1.5rem;">
+                    Guided by engineering principles and a deep respect for craftsmanship,
+                    we aspire to develop solutions that maximize the potential of existing materials,
+                    embrace sustainable building practices, and create homes designed to serve generations to come.
+                </p>
+
+                <p>
+                    As Portillo Roofing continues to grow, our goal is to become more than a roofing company.
+                    We seek to be a trusted partner in building resilient homes, strengthening communities,
+                    and helping shape a more sustainable future.
+                </p>
             </div>
         </div>
     </section>
@@ -485,6 +535,54 @@
         document.getElementById('mobileToggle').addEventListener('click', function() {
             document.getElementById('primaryNav').classList.toggle('open');
         });
+
+        // Crew data — add members or swap in real photos here without touching the layout
+        const crewMembers = [
+            {
+                name: "Marco Portillo Sr.",
+                role: "Founder",
+                photo: "Images/crew-placeholder.svg",
+                bio: "Master craftsman with over 25 years of experience serving homeowners throughout Texas. His dedication to quality and integrity laid the foundation for Portillo Roofing LLC."
+            },
+            {
+                name: "Marco Portillo Jr.",
+                role: "Owner / Engineer",
+                photo: "Images/crew-placeholder.svg",
+                bio: "Mechanical Engineer from The University of Texas at Austin and second-generation roofer, committed to combining engineering innovation with time-tested craftsmanship to deliver roofing solutions built for the future."
+            },
+            {
+                name: "Arturo",
+                role: "Foreman",
+                photo: "Images/crew-placeholder.svg",
+                bio: "Arturo leads the crew on every job site, overseeing daily work, quality control, and safety. With years of hands-on roofing experience, he's the one making sure each installation meets Portillo Roofing's standards from tear-off to final walkthrough."
+            },
+            {
+                name: "Aunel",
+                role: "Journeyman Roofer",
+                photo: "Images/crew-placeholder.svg",
+                bio: "Aunel is a skilled installer experienced in both metal and shingle roofing systems. Known for precise, efficient work, he's a key part of what keeps projects on schedule and built to last."
+            },
+            {
+                name: "Noe",
+                role: "Journeyman Roofer",
+                photo: "Images/crew-placeholder.svg",
+                bio: "Noe brings solid craftsmanship to every roof he works on, handling installation and repair work with the same attention to detail on every job, big or small."
+            }
+        ];
+
+        function renderCrewCard(member) {
+            return `
+                <div class="card animate-fadeInUp">
+                    <div class="card-body text-center">
+                        <img src="${member.photo}" alt="${member.name} headshot placeholder" class="crew-avatar">
+                        <h3 style="color: var(--primary-color); margin-bottom: 0.25rem;">${member.name}</h3>
+                        <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 1rem;">${member.role}</div>
+                        <p style="color: var(--dark-gray); line-height: 1.6;">${member.bio}</p>
+                    </div>
+                </div>`;
+        }
+
+        document.getElementById('crewGrid').innerHTML = crewMembers.map(renderCrewCard).join('');
 
         // Scroll Animations
         const observerOptions = {
