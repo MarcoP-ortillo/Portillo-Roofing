@@ -72,42 +72,67 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <img src="Images/hero-placeholder.svg" alt="Professional Roofing Installation" loading="lazy">
+    <section class="hero hero-split">
+        <div class="hero-text-panel">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span id="typed-text"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    Protecting homes and businesses across Austin, Texas with premium roofing solutions backed by decades of craftsmanship and unwavering integrity.
+                </p>
+                <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-lg hero-cta">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:5126291342" class="btn btn-outline btn-lg hero-cta" style="color: #fff !important; border-color: #fff !important;">
+                        <i class="fas fa-phone" style="color: inherit;"></i>
+                        Call Now
+                    </a>
+                </div>
+                <div class="flex" style="margin-top: 2rem; gap: 2rem; color: var(--white); flex-wrap: wrap;">
+                    <div class="text-center">
+                        <div style="font-size: 2rem; font-weight: bold;">25+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 2rem; font-weight: bold;">1000+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Roofs Completed</div>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 2rem; font-weight: bold;">5★</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Customer Rating</div>
+                    </div>
+                </div>
+                <!-- Trust chip: star rating + review count -->
+                <!-- TODO(marco): swap in the real aggregate rating, review count, and the exact
+                     Google Business Profile review URL once available. -->
+                <div class="hero-trust-chip" style="display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.75rem; padding: 0.6rem 1.1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px;">
+                    <span style="color: var(--accent-color); letter-spacing: 1px;">★★★★★</span>
+                    <a href="https://www.google.com/search?q=Portillo+Roofing+LLC+Austin+TX+reviews" target="_blank" rel="nofollow noopener" style="color: #fff; font-weight: 600; font-size: 0.9rem;">
+                        Read Our Reviews
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span id="typed-text"></span>
-            </h1>
-            <p class="hero-subtitle">
-                Protecting homes and businesses across Austin, Texas with premium roofing solutions backed by decades of craftsmanship and unwavering integrity.
-            </p>
-            <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-primary btn-lg hero-cta">
-                    <i class="fas fa-calculator"></i>
-                    Get Free Quote
-                </a>
-                <a href="tel:5126291342" class="btn btn-outline btn-lg hero-cta" style="color: #fff !important; border-color: #fff !important;">
-                    <i class="fas fa-phone" style="color: inherit;"></i>
-                    Call Now
-                </a>
-            </div>
-            <div class="flex-center" style="margin-top: 2rem; gap: 2rem; color: var(--white);">
-                <div class="text-center">
-                    <div style="font-size: 2rem; font-weight: bold;">25+</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9;">Years Experience</div>
-                </div>
-                <div class="text-center">
-                    <div style="font-size: 2rem; font-weight: bold;">1000+</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9;">Roofs Completed</div>
-                </div>
-                                <div class="text-center">
-                    <div style="font-size: 2rem; font-weight: bold;">5★</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9;">Customer Rating</div>
-                </div>
-            </div>
-            <!-- BBB Badge – Hero (far-right) -->
+        <div class="hero-media-panel">
+            <div class="hero-gradient-fallback" aria-hidden="true"></div>
+            <img src="Images/portfolio-curved-ridges-03.jpg" alt="Curved standing-seam metal roof installation, Curved Ridges project" class="hero-photo" loading="eager">
+            <!--
+              TODO(marco): Real shingle timelapse + metal drone before/after footage goes here once filmed.
+              When it's ready, replace the <img class="hero-photo"> above with:
+
+              <video class="hero-video" autoplay muted loop playsinline
+                     poster="Images/portfolio-curved-ridges-03.jpg">
+                <source src="Images/hero-timelapse.mp4" type="video/mp4">
+              </video>
+
+              No other markup changes needed — .hero-video is already styled to fill this panel,
+              and is automatically hidden (falling back to the poster image) under
+              prefers-reduced-motion via the rule in style.css.
+            -->
+            <!-- BBB Badge – Hero (over photo, bottom-right) -->
             <div class="bbb-hero-badge">
                 <a href="https://www.bbb.org/us/tx/dale/profile/residential-roofing/portillo-roofing-0825-1000247730/#sealclick"
                    target="_blank" rel="nofollow">
@@ -116,8 +141,6 @@
                 </a>
             </div>
         </div>
-    </section>
-
     </section>
 
     <!-- Services Section -->
@@ -133,7 +156,7 @@
             
             <div class="services-grid">
                 <div class="service-card animate-fadeInLeft">
-                    <img src="Images/IMG_1212.jpg" alt="Metal Roofing Installation">
+                    <img src="Images/portfolio-inwood-01.jpeg" alt="Metal Roofing Installation">
                     <div class="service-content">
                         <h3 class="service-title">
                             <i class="fas fa-shield-alt" style="color: var(--accent-color);"></i>
@@ -157,7 +180,7 @@
                 </div>
                 
                 <div class="service-card animate-fadeInUp">
-                    <img src="Images/IMG_0872.jpg" alt="Shingle Roof Replacement">
+                    <img src="Images/service-shingle-roofing-01.jpg" alt="Shingle Roof Replacement">
                     <div class="service-content">
                         <h3 class="service-title">
                             <i class="fas fa-home" style="color: var(--accent-color);"></i>
@@ -364,6 +387,7 @@
                         <li><a href="services.html#emergency-repairs">Emergency Repairs</a></li>
                         <li><a href="services.html#roof-inspections">Roof Inspections</a></li>
                         <li><a href="services.html#insurance-claims">Insurance Claims</a></li>
+                        <li><a href="services.html#epoxy-countertops">Interior Finishes</a></li>
                     </ul>
                 </div>
                 
@@ -475,12 +499,22 @@
         // Render Recent Projects teaser from shared portfolio data
         function renderTeaserItem(p) {
             const photo = p.photo || 'Images/photo-placeholder.svg';
+            const badge = p.featured
+                ? `<div style="position: absolute; top: 0.75rem; left: 0.75rem; background: var(--accent-color); color: #fff; padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; z-index: 2;">
+                        <i class="fas fa-star"></i> Featured
+                   </div>`
+                : (p.inProgress
+                    ? `<div style="position: absolute; top: 0.75rem; left: 0.75rem; background: var(--charcoal-dark); color: #fff; padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; z-index: 2;">
+                            <i class="fas fa-hard-hat"></i> In Progress
+                       </div>`
+                    : '');
             return `
                 <div class="project-item">
+                    ${badge}
                     <img src="${photo}" alt="${p.name}">
                     <div class="project-overlay">
                         <h4 style="color: #CC5500;">${p.name}</h4>
-                        <p style="color: #CC5500;">${p.duration}</p>
+                        <p style="color: #CC5500;">${p.inProgress ? 'In Progress' : p.duration}</p>
                     </div>
                 </div>`;
         }
