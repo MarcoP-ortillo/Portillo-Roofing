@@ -147,6 +147,7 @@
                         <li><a href="services.html#emergency-repairs">Emergency Repairs</a></li>
                         <li><a href="services.html#roof-inspections">Roof Inspections</a></li>
                         <li><a href="services.html#insurance-claims">Insurance Claims</a></li>
+                        <li><a href="services.html#epoxy-countertops">Interior Finishes</a></li>
                     </ul>
                 </div>
 
@@ -197,21 +198,47 @@
         function renderProjectCard(p) {
             const photo = p.photo || 'Images/photo-placeholder.svg';
             const complications = (p.complications && p.complications.trim())
-                ? `<div style="color: var(--dark-gray);">
+                ? `<div style="color: var(--dark-gray); margin-top: 0.5rem;">
                         <i class="fas fa-exclamation-triangle" style="color: var(--warning-color); margin-right: 0.4rem;"></i>
                         <strong style="color: var(--primary-color);">Complications:</strong> ${p.complications}
                    </div>`
                 : '';
+            const type = (p.type && p.type.trim())
+                ? `<div style="color: var(--dark-gray); font-size: 0.9rem; margin-bottom: 0.75rem;">${p.type}</div>`
+                : '';
+            const size = (p.size && p.size.trim())
+                ? `<div style="margin-bottom: 0.5rem; color: var(--dark-gray);">
+                        <i class="fas fa-ruler-combined" style="color: var(--accent-color); margin-right: 0.4rem;"></i>
+                        <strong style="color: var(--primary-color);">Scope:</strong> ${p.size}
+                   </div>`
+                : '';
+            const badge = p.featured
+                ? `<div style="position: absolute; top: 0.75rem; left: 0.75rem; background: var(--accent-color); color: #fff; padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; z-index: 2;">
+                        <i class="fas fa-star"></i> Featured
+                   </div>`
+                : (p.inProgress
+                    ? `<div style="position: absolute; top: 0.75rem; left: 0.75rem; background: var(--charcoal-dark); color: #fff; padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; z-index: 2;">
+                            <i class="fas fa-hard-hat"></i> In Progress
+                       </div>`
+                    : '');
+            const durationRow = p.inProgress
+                ? ''
+                : `<div style="margin-bottom: 0.5rem; color: var(--dark-gray);">
+                        <i class="fas fa-clock" style="color: var(--accent-color); margin-right: 0.4rem;"></i>
+                        <strong style="color: var(--primary-color);">Duration:</strong> ${p.duration}
+                   </div>`;
             return `
                 <div class="card animate-fadeInUp">
-                    <img src="${photo}" alt="${p.name} project photo" class="card-img">
+                    <div style="position: relative;">
+                        ${badge}
+                        <img src="${photo}" alt="${p.name} project photo" class="card-img">
+                    </div>
                     <div class="card-body">
                         <h3 class="card-title">${p.name}</h3>
+                        ${type}
                         <p class="card-text">${p.description}</p>
-                        <div style="margin-bottom: 0.75rem; color: var(--dark-gray);">
-                            <i class="fas fa-clock" style="color: var(--accent-color); margin-right: 0.4rem;"></i>
-                            <strong style="color: var(--primary-color);">Duration:</strong> ${p.duration}
-                        </div>
+                        ${size}
+                        ${durationRow}
                         ${complications}
                     </div>
                 </div>`;
