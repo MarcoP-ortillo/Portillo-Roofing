@@ -1,0 +1,5 @@
+# Local Netlify folder
+.netlify
+
+# Local verification tooling (Playwright), not a project dependency
+node_modules
