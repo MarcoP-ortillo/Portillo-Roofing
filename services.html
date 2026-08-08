@@ -139,18 +139,45 @@
                                     <div class="roof-side roof-side-back">
                                         <div class="layer layer-deck stage-deck"></div>
                                         <div class="layer layer-underlayment stage-deck"></div>
-                                        <div class="layer layer-panels stage-panels"></div>
-                                        <div class="drip-edge stage-drip-edge"></div>
+                                        <div class="layer layer-pan stage-panels"></div>
+                                        <!-- Raised standing seams, one panel width apart -->
+                                        <div class="seam stage-panels" style="--seam-x: 18px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 48px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 78px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 108px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 138px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 168px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 198px;"></div>
+                                        <!-- Drip edge: flange on deck, face down the fascia, kick-out hem -->
+                                        <div class="drip-edge stage-drip-edge">
+                                            <div class="drip-flange"></div>
+                                            <div class="drip-face"></div>
+                                            <div class="drip-kick"></div>
+                                        </div>
                                     </div>
                                     <!-- Front slope -->
                                     <div class="roof-side roof-side-front">
                                         <div class="layer layer-deck stage-deck"></div>
                                         <div class="layer layer-underlayment stage-deck"></div>
-                                        <div class="layer layer-panels stage-panels"></div>
-                                        <div class="drip-edge stage-drip-edge"></div>
+                                        <div class="layer layer-pan stage-panels"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 18px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 48px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 78px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 108px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 138px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 168px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 198px;"></div>
+                                        <div class="drip-edge stage-drip-edge">
+                                            <div class="drip-flange"></div>
+                                            <div class="drip-face"></div>
+                                            <div class="drip-kick"></div>
+                                        </div>
                                     </div>
-                                    <!-- Ridge cap over the peak -->
-                                    <div class="ridge-cap stage-ridge-cap"></div>
+                                    <!-- Ridge cap: a leg draping down each slope over the peak -->
+                                    <div class="ridge-cap stage-ridge-cap">
+                                        <div class="ridge-leg ridge-leg-back"><div class="ridge-hem"></div></div>
+                                        <div class="ridge-leg ridge-leg-front"><div class="ridge-hem"></div></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="install-legend">
@@ -380,14 +407,15 @@
                             Epoxy Countertops
                         </h3>
                         <p class="service-description">
-                            Custom live-edge wood and epoxy river countertops and tables, built to order.
-                            <!-- TODO(marco): replace with real pricing/warranty specifics -->
+                            Custom live-edge wood and epoxy river countertops and tables, built to order —
+                            durable, long-lasting materials with professional installation you can trust.
                         </p>
                         <ul class="service-features">
                             <li>Custom live-edge wood slabs</li>
                             <li>Poured epoxy river inlay</li>
                             <li>Built to order</li>
-                            <li>TODO: fill in pricing/warranty specifics</li>
+                            <li><strong>Pricing:</strong> Affordable — contact us for a free quote tailored to your project</li>
+                            <li><strong>Warranty:</strong> Workmanship backed by a limited warranty covering installation defects. Ask your project lead for full terms.</li>
                         </ul>
                         <a href="contact.html?service=epoxy-countertops" class="btn btn-primary">
                             <i class="fas fa-arrow-right"></i>

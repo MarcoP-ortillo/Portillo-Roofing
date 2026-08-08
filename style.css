@@ -918,54 +918,181 @@ a:hover {
     backface-visibility: hidden;
 }
 
-/* Stage 1: structural deck + underlayment over it */
+/* Stage 1: structural deck (sheathing panels with joints) + underlayment.
+   Underlayment runs in horizontal courses lapped up the slope, the way it's
+   actually rolled out — not a flat colour field. */
 .layer-deck {
-    background: repeating-linear-gradient(90deg, #b5814f 0 26px, #a97646 26px 28px);
+    background:
+        repeating-linear-gradient(90deg, transparent 0 47px, rgba(0, 0, 0, 0.28) 47px 49px),
+        repeating-linear-gradient(0deg, transparent 0 36px, rgba(0, 0, 0, 0.22) 36px 38px),
+        linear-gradient(180deg, #c08a55, #a9754a);
     transform: translateZ(0);
 }
 
 .layer-underlayment {
-    background: repeating-linear-gradient(90deg, rgba(174, 198, 216, 0.95) 0 40px, rgba(158, 186, 206, 0.95) 40px 42px);
+    background:
+        repeating-linear-gradient(0deg,
+            rgba(255, 255, 255, 0.16) 0 1px,
+            transparent 1px 2px,
+            transparent 2px 22px,
+            rgba(0, 0, 0, 0.14) 22px 24px),
+        linear-gradient(180deg, #b9cfe0, #9fbacd);
     transform: translateZ(2px);
 }
 
-/* Stage 3: standing-seam panels, ribs running up the slope */
-.layer-panels {
-    background: repeating-linear-gradient(90deg, #47596c 0 15px, #62788d 15px 18px);
+/* Stage 3: the flat pan between seams. Striations run up-slope — the standard
+   way pans are stiffened to fight oil canning on wide flat faces. */
+.layer-pan {
+    background:
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.06) 0 1px,
+            transparent 1px 7px),
+        linear-gradient(180deg, #56697d, #47596c);
     transform: translateZ(4px);
 }
 
-/* Slight light/shade difference between the two slopes so the 3D form reads */
-.roof-side-back .layer { filter: brightness(0.82); }
-.roof-side-front .layer { filter: brightness(1.05); }
-
-/* Stage 2: drip edge / flashing along each eave */
-.drip-edge {
+/* Standing seams: raised vertical fins running eave-to-ridge, ~1.75in tall at
+   this scale, spaced one panel width apart. rotateY stands each fin up out of
+   the roof plane; the trailing translateX lifts it so it sits on the pan rather
+   than being half-buried in it. */
+.seam {
     position: absolute;
-    left: -3px;
-    right: -3px;
-    height: 7px;
-    background: linear-gradient(180deg, #39434e, var(--charcoal-dark));
-    transform: translateZ(6px);
-    border-radius: 1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 7px;
+    background: linear-gradient(90deg, #8ea3b8, #6b8096 55%, #45566a);
+    /* Pivot on the edge that meets the pan, so the fin stands up out of the roof
+       plane in one direction instead of sinking half its height into it.
+       No backface-visibility:hidden here — as the roof orbits, half the fins turn
+       their back face to the camera and would otherwise vanish. */
+    transform-origin: left center;
+    transform: translateZ(4px) translateX(var(--seam-x)) rotateY(-90deg);
+    border-radius: 1px 1px 0 0;
 }
 
-.roof-side-front .drip-edge { bottom: -3px; }
-.roof-side-back .drip-edge { top: -3px; }
+/* Slight light/shade difference between the two slopes so the 3D form reads */
+.roof-side-back .layer,
+.roof-side-back .seam { filter: brightness(0.82); }
+.roof-side-front .layer,
+.roof-side-front .seam { filter: brightness(1.06); }
 
-/* Stage 4: ridge cap sitting over the peak */
+/* Stage 2: drip edge — an actual L-profile. A flange laid on the deck, a face
+   turning down over the fascia, and a kick-out hem at the bottom that throws
+   water clear instead of letting it run back onto the fascia board. */
+.drip-edge {
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    height: 6px;
+    transform-style: preserve-3d;
+}
+
+.drip-flange,
+.drip-face,
+.drip-kick {
+    position: absolute;
+    left: 0;
+    right: 0;
+    backface-visibility: hidden;
+}
+
+/* flange: lies over the underlayment (z 2) and under the panels (z 4), which is
+   the order it actually goes down on site */
+.drip-flange {
+    top: 0;
+    height: 6px;
+    background: linear-gradient(180deg, #55606c, #3d4753);
+    transform: translateZ(3px);
+}
+
+/* face: turns down over the fascia, roughly perpendicular to the roof plane */
+.drip-face {
+    top: 0;
+    height: 9px;
+    background: linear-gradient(180deg, #46515e, #2b333c);
+    transform-origin: top center;
+    transform: translateZ(3px) rotateX(-90deg);
+}
+
+/* hem: folded back tight under the open end of the face, per the drip edge
+   profile on the cut list — not a wide open kick-out */
+.drip-kick {
+    top: 0;
+    height: 4px;
+    background: linear-gradient(180deg, #59646f, #414b56);
+    transform-origin: top center;
+    transform: translateZ(3px) translateY(9px) rotateX(-160deg);
+}
+
+/* The front slope's eave is its lower edge, the back slope's is its upper edge,
+   so the whole assembly flips on the back slope. */
+.roof-side-front .drip-edge { bottom: -3px; }
+
+.roof-side-back .drip-edge {
+    top: -3px;
+    transform: rotateZ(180deg);
+}
+
+/* Stage 4: ridge cap — a peaked cap with a leg draping down each slope over the
+   ridge closure, hemmed at the bottom of each leg. */
 .ridge-cap {
     position: absolute;
-    top: 68px;
-    left: -8px;
-    width: 246px;
-    height: 15px;
-    background: linear-gradient(180deg, #f0913c, var(--accent-color));
-    border-radius: 3px;
-    /* Sits just above the panel layer at the hinge line — the ridge itself is
-       the high point, so this only needs to clear the panels, not float. */
-    transform: translateZ(8px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    top: 75px;
+    left: -6px;
+    width: 242px;
+    height: 0;
+    transform-style: preserve-3d;
+    /* Just clear of the pan so it reads as sitting on the panels, rather than
+       buried under them (translateZ 0) or hovering above them (much more). */
+    transform: translateZ(6px);
+}
+
+/* Legs are long enough to drape over the top of the standing seams, the way a
+   real cap covers the panel ends and ridge closure rather than sitting on top.
+   Each leg ends in a hem, matching the formed ridge profile on the cut list. */
+.ridge-leg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: linear-gradient(180deg, #f3a14e, #e67e22);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+    transform-style: preserve-3d;
+}
+
+.ridge-hem {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(180deg, #e07d20, #c96a15);
+}
+
+/* folded back under the open end of each leg */
+.ridge-leg-back .ridge-hem {
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(140deg);
+}
+
+.ridge-leg-front .ridge-hem {
+    bottom: 0;
+    transform-origin: bottom center;
+    transform: rotateX(-140deg);
+}
+
+/* one leg down each slope, matching the roof pitch */
+.ridge-leg-back {
+    bottom: 0;
+    transform-origin: bottom center;
+    transform: rotateX(30deg);
+}
+
+.ridge-leg-front {
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(-30deg);
 }
 
 .install-diagram .stage-deck,
