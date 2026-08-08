@@ -62,6 +62,12 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    /* The closed off-canvas mobile nav parks off-screen to the right, which would
+       otherwise widen the page and allow sideways scrolling. `clip` suppresses that
+       without creating a scroll container, so the sticky header keeps working
+       (`hidden` first as a fallback for older browsers). */
+    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
@@ -377,28 +383,60 @@ a:hover {
     overflow: hidden;
 }
 
+/* Sits above the hero's own background colour (z-index 0, not -1) so the job
+   photo is actually visible, but still below the wash and the text. */
 .hero-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .hero-background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
+    filter: brightness(0.8);
+}
+
+/* Translucent charcoal wash over the sub-page hero photos so headline text keeps
+   contrast. The split homepage hero handles its own panels, so it's excluded. */
+.hero:not(.hero-split)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(24, 31, 39, 0.78), rgba(33, 43, 54, 0.68));
+    z-index: 1;
 }
 
 .hero-content {
+    position: relative;
     text-align: center;
     color: var(--white);
     max-width: 800px;
     padding: var(--space-lg);
     z-index: 2;
+}
+
+/* Headings default to the dark --primary-color, which is unreadable against the
+   dark hero — force white so hero copy keeps contrast. */
+.hero-content h1,
+.hero-content h2,
+.hero-content h3 {
+    color: var(--white);
+}
+
+/* CTA band — job photo behind a charcoal wash instead of a flat gradient block */
+.cta-section {
+    background-color: var(--charcoal-dark);
+    background-image: linear-gradient(135deg, rgba(24, 31, 39, 0.9), rgba(33, 43, 54, 0.86)),
+                      url("Images/portfolio-inwood-01.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
 }
 
 /* Split Hero (homepage) — dark text panel + photo/gradient media panel */
@@ -420,6 +458,13 @@ a:hover {
     justify-content: center;
     padding: var(--space-2xl) var(--space-2xl);
     text-align: left;
+    /* Job photo behind a heavy charcoal wash so the panel has real texture
+       instead of reading as a flat black block, while headline/CTA stay legible. */
+    background-image: linear-gradient(rgba(24, 31, 39, 0.9), rgba(24, 31, 39, 0.93)),
+                      url("Images/portfolio-knollwood-01.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-split .hero-content {
@@ -818,9 +863,109 @@ a:hover {
     text-align: center;
 }
 
-.install-diagram svg {
-    width: 100%;
-    height: auto;
+/* 3D scene: a gable roof built from real perspective-transformed planes,
+   with each install stage appearing in sequence on a loop. */
+.install-scene {
+    perspective: 900px;
+    perspective-origin: 50% 30%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.install-roof {
+    position: relative;
+    width: 230px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: roofOrbit 22s ease-in-out infinite;
+}
+
+/* rotateZ spins the roof on its own base plane (turntable), rotateX tilts that
+   turntable toward the viewer — tilt is kept shallower than the slope pitch so
+   both roof planes stay visible rather than one going edge-on. */
+@keyframes roofOrbit {
+    0%, 100% { transform: rotateX(45deg) rotateZ(-28deg); }
+    50%      { transform: rotateX(45deg) rotateZ(28deg); }
+}
+
+/* Each slope of the gable, hinged at the ridge line in the middle */
+.roof-side {
+    position: absolute;
+    left: 0;
+    width: 230px;
+    height: 75px;
+    transform-style: preserve-3d;
+}
+
+.roof-side-back {
+    top: 0;
+    transform-origin: bottom center;
+    transform: rotateX(30deg);
+}
+
+.roof-side-front {
+    top: 75px;
+    transform-origin: top center;
+    transform: rotateX(-30deg);
+}
+
+.roof-side .layer {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+}
+
+/* Stage 1: structural deck + underlayment over it */
+.layer-deck {
+    background: repeating-linear-gradient(90deg, #b5814f 0 26px, #a97646 26px 28px);
+    transform: translateZ(0);
+}
+
+.layer-underlayment {
+    background: repeating-linear-gradient(90deg, rgba(174, 198, 216, 0.95) 0 40px, rgba(158, 186, 206, 0.95) 40px 42px);
+    transform: translateZ(2px);
+}
+
+/* Stage 3: standing-seam panels, ribs running up the slope */
+.layer-panels {
+    background: repeating-linear-gradient(90deg, #47596c 0 15px, #62788d 15px 18px);
+    transform: translateZ(4px);
+}
+
+/* Slight light/shade difference between the two slopes so the 3D form reads */
+.roof-side-back .layer { filter: brightness(0.82); }
+.roof-side-front .layer { filter: brightness(1.05); }
+
+/* Stage 2: drip edge / flashing along each eave */
+.drip-edge {
+    position: absolute;
+    left: -3px;
+    right: -3px;
+    height: 7px;
+    background: linear-gradient(180deg, #39434e, var(--charcoal-dark));
+    transform: translateZ(6px);
+    border-radius: 1px;
+}
+
+.roof-side-front .drip-edge { bottom: -3px; }
+.roof-side-back .drip-edge { top: -3px; }
+
+/* Stage 4: ridge cap sitting over the peak */
+.ridge-cap {
+    position: absolute;
+    top: 68px;
+    left: -8px;
+    width: 246px;
+    height: 15px;
+    background: linear-gradient(180deg, #f0913c, var(--accent-color));
+    border-radius: 3px;
+    /* Sits just above the panel layer at the hinge line — the ridge itself is
+       the high point, so this only needs to clear the panels, not float. */
+    transform: translateZ(8px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .install-diagram .stage-deck,
@@ -890,14 +1035,36 @@ a:hover {
         animation: none;
         opacity: 1;
     }
+
+    /* Hold the roof at a fixed angle instead of orbiting */
+    .install-roof {
+        animation: none;
+        transform: rotateX(58deg) rotateZ(-20deg);
+    }
 }
 
-/* Service Category Header — dark charcoal band above a service-card grid */
+/* Service Category Header — real job photo behind a translucent charcoal wash,
+   dark enough to keep white text well above WCAG AA contrast. */
 .category-header {
-    background: var(--charcoal-dark);
+    background-color: var(--charcoal-dark);
+    background-image: linear-gradient(rgba(24, 31, 39, 0.88), rgba(24, 31, 39, 0.9)),
+                      url("Images/portfolio-curved-ridges-03.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--white);
     padding: var(--space-2xl) var(--space-lg);
     margin-bottom: var(--space-2xl);
+}
+
+.category-header-additional {
+    background-image: linear-gradient(rgba(24, 31, 39, 0.88), rgba(24, 31, 39, 0.9)),
+                      url("Images/portfolio-mendez-school-01.jpg");
+}
+
+.category-header-interior {
+    background-image: linear-gradient(rgba(24, 31, 39, 0.88), rgba(24, 31, 39, 0.9)),
+                      url("Images/service-epoxy-countertops-02.jpeg");
 }
 
 .category-header h2 {
@@ -908,9 +1075,14 @@ a:hover {
     color: rgba(255, 255, 255, 0.85);
 }
 
-/* Footer */
+/* Footer — job photo behind a heavier wash, since footer text is small */
 .site-footer {
-    background: var(--charcoal-dark);
+    background-color: var(--charcoal-dark);
+    background-image: linear-gradient(rgba(24, 31, 39, 0.94), rgba(24, 31, 39, 0.96)),
+                      url("Images/portfolio-inwood-02.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--white);
     padding: var(--space-2xl) 0 var(--space-lg);
     margin-top: var(--space-3xl);
