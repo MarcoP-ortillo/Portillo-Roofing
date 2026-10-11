@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Placeholder headshot silhouette">
+  <circle cx="200" cy="200" r="200" fill="#ECF0F1"/>
+  <circle cx="200" cy="160" r="72" fill="#B7C0C4"/>
+  <path d="M60,400 C60,290 120,240 200,240 C280,240 340,290 340,400 Z" fill="#B7C0C4"/>
+</svg>

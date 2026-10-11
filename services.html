@@ -27,7 +27,7 @@
     <div class="top-bar">
         <div class="container">
             <span class="top-text">
-                <i class="fas fa-award"></i> 25+ Years Experience • Insured • Free Estimates
+                <i class="fas fa-award"></i> Founded 2025 • 25+ Years Roofing Experience • Insured • Free Estimates
             </span>
             <div class="flex" style="gap: 1rem;">
                 <a href="tel:5126291342" class="phone">
@@ -54,7 +54,9 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="about.html#crew">Meet the Crew</a></li>
                     <li class="nav-item"><a href="services.html" class="active">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
                     <li class="nav-item"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -68,7 +70,7 @@
     <!-- Hero Section -->
     <section class="hero" style="height: 50vh; min-height: 400px;">
         <div class="hero-background">
-            <img src="https://kimi-web-img.moonshot.cn/img/www.peakroofing-solar.com/771eff47d54c807b14974d422f958cd2c226e491.webp" alt="Roofing Services" loading="lazy">
+            <img src="Images/portfolio-curved-ridges-02.jpg" alt="Curved standing-seam metal roof installed by Portillo Roofing" loading="lazy">
         </div>
         <div class="hero-content">
             <h1 style="font-size: clamp(2rem, 5vw, 3rem);">Comprehensive Roofing Services</h1>
@@ -80,20 +82,21 @@
     </section>
 
     <!-- Services Overview -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center animate-fadeInUp">
+    <section class="section" style="padding-top: 0;">
+        <div class="category-header">
+            <div class="container text-center animate-fadeInUp">
                 <h2>Choose the Perfect Roofing Solution</h2>
-                <p style="font-size: 1.125rem; color: var(--dark-gray); max-width: 700px; margin: 0 auto;">
-                    Whether your existing roof has seen better days or suffered storm damage, 
+                <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto;">
+                    Whether your existing roof has seen better days or suffered storm damage,
                     we offer solutions that fit your goals, budget, and timeline.
                 </p>
             </div>
-            
-            <div class="services-grid" style="margin-top: 3rem;">
+        </div>
+        <div class="container">
+            <div class="services-grid" style="margin-top: 1rem;">
                 <!-- Metal Roofing -->
                 <div class="service-card" id="metal-roofing">
-                    <img src="https://kimi-web-img.moonshot.cn/img/roofingintelligence.com/aaa599d172fe8d7e38fa04c96c18293aac72830a.jpg" alt="Metal Roofing Installation">
+                    <img src="Images/portfolio-curved-ridges-02.jpg" alt="Metal Roofing Installation">
                     <div class="service-content">
                         <h3 class="service-title">
                             <i class="fas fa-shield-alt" style="color: var(--accent-color);"></i>
@@ -110,20 +113,81 @@
                                 <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold;">40-50+ Years</div>
                             </div>
                             <div class="card" style="padding: 1rem; background: var(--light-gray);">
-                                <div style="font-weight: 600; color: var(--primary-color);">Energy Savings</div>
-                                <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold;">20-25%</div>
+                                <div style="font-weight: 600; color: var(--primary-color);">Efficiency</div>
+                                <div style="font-size: 1.5rem; color: var(--accent-color); font-weight: bold;">Energy Star</div>
                             </div>
                         </div>
                         
                         <ul class="service-features">
                             <li><strong>Exceptional Longevity:</strong> Lasts 40-50+ years with minimal maintenance</li>
                             <li><strong>Superior Durability:</strong> Resists hail, wind, fire, and UV damage</li>
-                            <li><strong>Energy Efficiency:</strong> Reflective coatings reduce cooling costs by 20-25%</li>
+                            <li><strong>Energy Efficiency:</strong> Reflective coatings can help reduce cooling costs</li>
                             <li><strong>Weather Resistant:</strong> Perfect for Texas climate conditions</li>
-                            <li><strong>Lifetime Warranty:</strong> Industry-leading manufacturer warranties</li>
+                            <li><strong>Warranty:</strong> Manufacturer warranties available; ask your project lead for terms</li>
                             <li><strong>Professional Installation:</strong> Certified installation team</li>
                         </ul>
-                        
+
+                        <!-- How We Install It: diagrammatic looping explainer, not a substitute for
+                             real photos/video. Stage labels are generic — the exact Z-bar/receiver,
+                             valley, and headwall flashing placement/terminology varies by system and
+                             needs Marco's review before this goes live. -->
+                        <h4 style="color: var(--primary-color); margin: 2rem 0 0.5rem; text-align: center;">How We Install It</h4>
+                        <div class="install-diagram">
+                            <div class="install-scene" role="img" aria-label="Rotating 3D diagram of the metal roof installation sequence: structural deck and underlayment, drip edge and flashing along the eaves, standing seam panel installation, then the ridge cap over the peak.">
+                                <div class="install-roof">
+                                    <!-- Back slope -->
+                                    <div class="roof-side roof-side-back">
+                                        <div class="layer layer-deck stage-deck"></div>
+                                        <div class="layer layer-underlayment stage-deck"></div>
+                                        <div class="layer layer-pan stage-panels"></div>
+                                        <!-- Raised standing seams, one panel width apart -->
+                                        <div class="seam stage-panels" style="--seam-x: 18px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 48px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 78px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 108px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 138px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 168px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 198px;"></div>
+                                        <!-- Drip edge: flange on deck, face down the fascia, kick-out hem -->
+                                        <div class="drip-edge stage-drip-edge">
+                                            <div class="drip-flange"></div>
+                                            <div class="drip-face"></div>
+                                            <div class="drip-kick"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Front slope -->
+                                    <div class="roof-side roof-side-front">
+                                        <div class="layer layer-deck stage-deck"></div>
+                                        <div class="layer layer-underlayment stage-deck"></div>
+                                        <div class="layer layer-pan stage-panels"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 18px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 48px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 78px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 108px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 138px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 168px;"></div>
+                                        <div class="seam stage-panels" style="--seam-x: 198px;"></div>
+                                        <div class="drip-edge stage-drip-edge">
+                                            <div class="drip-flange"></div>
+                                            <div class="drip-face"></div>
+                                            <div class="drip-kick"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Ridge cap: a leg draping down each slope over the peak -->
+                                    <div class="ridge-cap stage-ridge-cap">
+                                        <div class="ridge-leg ridge-leg-back"><div class="ridge-hem"></div></div>
+                                        <div class="ridge-leg ridge-leg-front"><div class="ridge-hem"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="install-legend">
+                                <span><span class="legend-dot" style="background:#B08968;"></span>Deck &amp; Underlayment</span>
+                                <span><span class="legend-dot" style="background:var(--charcoal-dark);"></span>Drip Edge &amp; Flashing</span>
+                                <span><span class="legend-dot" style="background:var(--secondary-color);"></span>Panel Installation</span>
+                                <span><span class="legend-dot" style="background:var(--accent-color);"></span>Ridge Cap</span>
+                            </div>
+                        </div>
+
                         <div class="flex" style="gap: 1rem; margin-top: 1.5rem;">
                             <a href="contact.html?service=metal-roofing" class="btn btn-primary">
                                 <i class="fas fa-calculator"></i>
@@ -136,10 +200,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Shingle Roofing -->
                 <div class="service-card" id="shingle-roofing">
-                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/0a0322460c9068ca2df2b1689d4ec3c00d27cd21.jpg" alt="Shingle Roof Installation">
+                    <img src="Images/service-shingle-roofing-01.jpg" alt="Shingle Roof Installation">
                     <div class="service-content">
                         <h3 class="service-title">
                             <i class="fas fa-home" style="color: var(--accent-color);"></i>
@@ -187,17 +251,18 @@
     </section>
 
     <!-- Additional Services -->
-    <section class="section" style="background: var(--light-gray);">
-        <div class="container">
-            <div class="text-center animate-fadeInUp">
+    <section class="section" style="background: var(--light-gray); padding-top: 0;">
+        <div class="category-header category-header-additional">
+            <div class="container text-center animate-fadeInUp">
                 <h2>Additional Services</h2>
-                <p style="font-size: 1.125rem; color: var(--dark-gray); margin-bottom: 3rem;">
+                <p style="max-width: 700px; margin: 0 auto;">
                     Comprehensive roofing solutions for every situation.
                 </p>
             </div>
-            
-            <div class="grid grid-3" style="gap: 2rem;">
-                <div class="card animate-fadeInLeft">
+        </div>
+        <div class="container">
+            <div class="grid grid-3" style="gap: 2rem; margin-top: 1rem;">
+                <div class="card animate-fadeInLeft" id="emergency-repairs">
                     <div class="card-body text-center">
                         <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
                             <i class="fas fa-exclamation-triangle"></i>
@@ -211,7 +276,7 @@
                             <li>24/7 emergency hotline</li>
                             <li>Same-day temporary repairs</li>
                             <li>Storm damage assessment</li>
-                            <li>Insurance claim assistance</li>
+                            <li>Storm damage documentation</li>
                         </ul>
                         <a href="tel:5126291342" class="btn btn-primary">
                             <i class="fas fa-phone"></i>
@@ -220,7 +285,7 @@
                     </div>
                 </div>
                 
-                <div class="card animate-fadeInUp">
+                <div class="card animate-fadeInUp" id="roof-inspections">
                     <div class="card-body text-center">
                         <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
                             <i class="fas fa-search"></i>
@@ -236,32 +301,123 @@
                             <li>Maintenance recommendations</li>
                             <li>Insurance documentation</li>
                         </ul>
-                        <a href="contact.html?service=inspection" class="btn btn-primary">
+                        <a href="contact.html?service=roof-inspection" class="btn btn-primary">
                             <i class="fas fa-calendar"></i>
                             Schedule Inspection
                         </a>
                     </div>
                 </div>
                 
-                <div class="card animate-fadeInRight">
+                <div class="card animate-fadeInRight" id="insurance-claims">
                     <div class="card-body text-center">
                         <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">
                             <i class="fas fa-file-invoice-dollar"></i>
                         </div>
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Insurance Claims</h3>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Storm Damage &amp; Insurance Work</h3>
                         <p style="margin-bottom: 1.5rem; color: var(--dark-gray);">
-                            Expert assistance with insurance claims for storm damage. We work directly 
-                            with your insurance company to ensure you get fair coverage.
+                            Storm damage inspections and repair estimates. We photograph damage, write a repair scope, and can meet your adjuster on site as your contractor. We are not public adjusters and do not negotiate or handle your claim. The homeowner is responsible for the insurance deductible.
                         </p>
                         <ul style="text-align: left; margin-bottom: 1.5rem;">
                             <li>Free damage assessment</li>
-                            <li>Insurance documentation</li>
-                            <li>Claim process guidance</li>
-                            <li>Direct insurance billing</li>
+                            <li>Photos and repair scope your insurer may request</li>
+                            <li>General explanation of the claim process</li>
                         </ul>
-                        <a href="contact.html?service=insurance" class="btn btn-primary">
+                        <a href="contact.html?service=insurance-claim" class="btn btn-primary">
                             <i class="fas fa-handshake"></i>
                             Get Help
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interior Finishes -->
+    <section class="section" style="padding-top: 0;">
+        <div class="category-header category-header-interior">
+            <div class="container text-center animate-fadeInUp">
+                <h2>Interior Finishes</h2>
+                <p style="max-width: 700px; margin: 0 auto;">
+                    Beyond the roofline — custom stone and epoxy work finished to the same standard as everything else we build.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="services-grid" style="margin-top: 1rem;">
+                <!-- Granite Countertops -->
+                <div class="service-card" id="granite-countertops">
+                    <img src="Images/photo-placeholder.svg" alt="Granite Countertops">
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <i class="fas fa-gem" style="color: var(--accent-color);"></i>
+                            Granite Countertops
+                        </h3>
+                        <p class="service-description">
+                            Granite countertops installed by Portillo Roofing LLC combine durable, long-lasting
+                            materials with professional installation you can trust. Granite is a naturally
+                            permanent stone that resists heat, scratching, and everyday wear for decades.
+                        </p>
+                        <ul class="service-features">
+                            <li>Naturally permanent stone</li>
+                            <li>Resists heat, scratching, and everyday wear</li>
+                            <li><strong>Pricing:</strong> Affordable — contact us for a free quote tailored to your project</li>
+                            <li><strong>Warranty:</strong> Workmanship backed by a limited warranty covering installation defects. Ask your project lead for full terms.</li>
+                        </ul>
+                        <a href="contact.html?service=granite-countertops" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Epoxy Flooring -->
+                <div class="service-card" id="epoxy-flooring">
+                    <img src="Images/photo-placeholder.svg" alt="Epoxy Flooring">
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <i class="fas fa-layer-group" style="color: var(--accent-color);"></i>
+                            Epoxy Flooring
+                        </h3>
+                        <p class="service-description">
+                            Our epoxy flooring systems are built for high-durability, low-maintenance
+                            performance in both residential and commercial spaces — durable, long-lasting
+                            materials with professional installation you can trust.
+                        </p>
+                        <ul class="service-features">
+                            <li>High-durability, low-maintenance performance</li>
+                            <li>Residential and commercial spaces</li>
+                            <li><strong>Pricing:</strong> Affordable — contact us for a free quote tailored to your project</li>
+                            <li><strong>Warranty:</strong> Workmanship backed by a limited warranty covering installation defects. Ask your project lead for full terms.</li>
+                        </ul>
+                        <a href="contact.html?service=epoxy-flooring" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Epoxy Countertops -->
+                <div class="service-card" id="epoxy-countertops">
+                    <img src="Images/service-epoxy-countertops-01.jpeg" alt="Live-edge wood and epoxy river countertop">
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <i class="fas fa-water" style="color: var(--accent-color);"></i>
+                            Epoxy Countertops
+                        </h3>
+                        <p class="service-description">
+                            Custom live-edge wood and epoxy river countertops and tables, built to order —
+                            durable, long-lasting materials with professional installation you can trust.
+                        </p>
+                        <ul class="service-features">
+                            <li>Custom live-edge wood slabs</li>
+                            <li>Poured epoxy river inlay</li>
+                            <li>Built to order</li>
+                            <li><strong>Pricing:</strong> Affordable — contact us for a free quote tailored to your project</li>
+                            <li><strong>Warranty:</strong> Workmanship backed by a limited warranty covering installation defects. Ask your project lead for full terms.</li>
+                        </ul>
+                        <a href="contact.html?service=epoxy-countertops" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                            Get Quote
                         </a>
                     </div>
                 </div>
@@ -281,8 +437,8 @@
             
             <div class="grid grid-2" style="gap: 3rem; align-items: center;">
                 <div class="animate-fadeInLeft">
-                    <img src="https://kimi-web-img.moonshot.cn/img/www.improveitmd.com/a04f035cc509453435784c37dd5d4edc7b442a9d.webp" 
-                         alt="Professional Roofing Team" 
+                    <img src="Images/photo-placeholder.svg"
+                         alt="Professional Roofing Team"
                          style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
                 </div>
                 
@@ -296,7 +452,7 @@
                             </div>
                             <div>
                                 <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">25+ Years Experience</h4>
-                                <p style="color: var(--dark-gray);">Decades of roofing expertise with thousands of successful installations across Central Texas.</p>
+                                <p style="color: var(--dark-gray);">25+ years of roofing experience, now serving homeowners and builders across Central Texas.</p>
                             </div>
                         </div>
                         
@@ -342,12 +498,12 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white);">
+    <section class="section cta-section">
         <div class="container text-center">
             <div class="animate-fadeInUp">
                 <h2 style="color: var(--white);">Ready to Start Your Roofing Project?</h2>
                 <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Get a free, no-obligation quote from Austin's most trusted roofing professionals.
+                    Get a free, no-obligation quote from a family-owned Austin roofing company.
                 </p>
                 <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
                     <a href="contact.html" class="btn btn-primary btn-lg">
@@ -370,7 +526,7 @@
                 <div class="footer-section">
                     <h3>Portillo Roofing LLC</h3>
                     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
-                        Professional roofing services in Austin, Texas. Licensed, insured, 
+                        Professional roofing services in Austin, Texas. Insured, 
                         and dedicated to excellence in every project.
                     </p>
                     <div style="margin-top: 1rem;">
@@ -392,7 +548,8 @@
                         <li><a href="#shingle-roofing">Shingle Roofing</a></li>
                         <li><a href="#emergency-repairs">Emergency Repairs</a></li>
                         <li><a href="#roof-inspections">Roof Inspections</a></li>
-                        <li><a href="#insurance-claims">Insurance Claims</a></li>
+                        <li><a href="#insurance-claims">Storm Damage &amp; Insurance</a></li>
+                        <li><a href="#epoxy-countertops">Interior Finishes</a></li>
                     </ul>
                 </div>
                 

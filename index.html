@@ -31,7 +31,7 @@
     <div class="top-bar">
         <div class="container">
             <span class="top-text">
-                <i class="fas fa-award"></i> 25+ Years Experience • Insured • Free Estimates
+                <i class="fas fa-award"></i> Founded 2025 • 25+ Years Roofing Experience • Insured • Free Estimates
             </span>
             <div class="flex" style="gap: 1rem;">
                 <a href="tel:5126291342" class="phone">
@@ -58,7 +58,9 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="active">Home</a></li>
                     <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="about.html#crew">Meet the Crew</a></li>
                     <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
                     <li class="nav-item"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -70,42 +72,64 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <img src="https://kimi-web-img.moonshot.cn/img/www.peakroofing-solar.com/771eff47d54c807b14974d422f958cd2c226e491.webp" alt="Professional Roofing Installation" loading="lazy">
+    <section class="hero hero-split">
+        <div class="hero-text-panel">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span id="typed-text"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    Protecting homes and businesses across Austin, Texas with premium roofing solutions backed by 25+ years of roofing experience and unwavering integrity.
+                </p>
+                <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-lg hero-cta">
+                        <i class="fas fa-calculator"></i>
+                        Get Free Quote
+                    </a>
+                    <a href="tel:5126291342" class="btn btn-outline btn-lg hero-cta" style="color: #fff !important; border-color: #fff !important;">
+                        <i class="fas fa-phone" style="color: inherit;"></i>
+                        Call Now
+                    </a>
+                </div>
+                <div class="flex" style="margin-top: 2rem; gap: 2rem; color: var(--white); flex-wrap: wrap;">
+                    <div class="text-center">
+                        <div style="font-size: 2rem; font-weight: bold;">25+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Years of Roofing Experience</div>
+                    </div>
+                    <div class="text-center" style="padding-left: 2rem; border-left: 1px solid rgba(255,255,255,0.25);">
+                        <div style="font-size: 2rem; font-weight: bold;">2025</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Founded</div>
+                    </div>
+                    <div class="text-center" style="padding-left: 2rem; border-left: 1px solid rgba(255,255,255,0.25);">
+                        <div style="font-size: 2rem; font-weight: bold;">24/7</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Emergency Response</div>
+                    </div>
+                </div>
+                <!-- Reviews link -->
+                <div class="hero-trust-chip" style="display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.75rem; padding: 0.6rem 1.1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px;">
+                    <a href="https://share.google/cOX3Gk6kkZGoqbMvr" target="_blank" rel="nofollow noopener" style="color: #fff; font-weight: 600; font-size: 0.9rem;">
+                        Read Our Reviews
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span id="typed-text"></span>
-            </h1>
-            <p class="hero-subtitle">
-                Protecting homes and businesses across Austin, Texas with premium roofing solutions backed by decades of craftsmanship and unwavering integrity.
-            </p>
-            <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-primary btn-lg hero-cta">
-                    <i class="fas fa-calculator"></i>
-                    Get Free Quote
-                </a>
-                <a href="tel:5126291342" class="btn btn-outline btn-lg hero-cta" style="color: #fff !important; border-color: #fff !important;">
-                    <i class="fas fa-phone" style="color: inherit;"></i>
-                    Call Now
-                </a>
-            </div>
-            <div class="flex-center" style="margin-top: 2rem; gap: 2rem; color: var(--white);">
-                <div class="text-center">
-                    <div style="font-size: 2rem; font-weight: bold;">25+</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9;">Years Experience</div>
-                </div>
-                <div class="text-center">
-                    <div style="font-size: 2rem; font-weight: bold;">1000+</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9;">Roofs Completed</div>
-                </div>
-                                <div class="text-center">
-                    <div style="font-size: 2rem; font-weight: bold;">5★</div>
-                    <div style="font-size: 0.9rem; opacity: 0.9;">Customer Rating</div>
-                </div>
-            </div>
-            <!-- BBB Badge – Hero (far-right) -->
+        <div class="hero-media-panel">
+            <div class="hero-gradient-fallback" aria-hidden="true"></div>
+            <img src="Images/portfolio-curved-ridges-03.jpg" alt="Curved standing-seam metal roof installation, Curved Ridges project" class="hero-photo" loading="eager">
+            <!--
+              TODO(marco): Real shingle timelapse + metal drone before/after footage goes here once filmed.
+              When it's ready, replace the <img class="hero-photo"> above with:
+
+              <video class="hero-video" autoplay muted loop playsinline
+                     poster="Images/portfolio-curved-ridges-03.jpg">
+                <source src="Images/hero-timelapse.mp4" type="video/mp4">
+              </video>
+
+              No other markup changes needed — .hero-video is already styled to fill this panel,
+              and is automatically hidden (falling back to the poster image) under
+              prefers-reduced-motion via the rule in style.css.
+            -->
+            <!-- BBB Badge – Hero (over photo, bottom-right) -->
             <div class="bbb-hero-badge">
                 <a href="https://www.bbb.org/us/tx/dale/profile/residential-roofing/portillo-roofing-0825-1000247730/#sealclick"
                    target="_blank" rel="nofollow">
@@ -114,8 +138,6 @@
                 </a>
             </div>
         </div>
-    </section>
-
     </section>
 
     <!-- Services Section -->
@@ -131,7 +153,7 @@
             
             <div class="services-grid">
                 <div class="service-card animate-fadeInLeft">
-                    <img src="Images/IMG_1212.jpg" alt="Metal Roofing Installation">
+                    <img src="Images/portfolio-inwood-01.jpeg" alt="Metal Roofing Installation">
                     <div class="service-content">
                         <h3 class="service-title">
                             <i class="fas fa-shield-alt" style="color: var(--accent-color);"></i>
@@ -139,10 +161,10 @@
                         </h3>
                         <p class="service-description">
                             Premium standing-seam metal roofing systems that last 40-50+ years. Energy-efficient, 
-                            fire-resistant, and backed by industry-leading warranties.
+                            fire-resistant, and backed by competitive warranties.
                         </p>
                         <ul class="service-features">
-                            <li>Lifetime warranty available</li>
+                            <li>Manufacturer warranties available</li>
                             <li>Energy Star certified materials</li>
                             <li>Professional installation team</li>
                             <li>Financing options available</li>
@@ -155,7 +177,7 @@
                 </div>
                 
                 <div class="service-card animate-fadeInUp">
-                    <img src="Images/IMG_0872.jpg" alt="Shingle Roof Replacement">
+                    <img src="Images/service-shingle-roofing-01.jpg" alt="Shingle Roof Replacement">
                     <div class="service-content">
                         <h3 class="service-title">
                             <i class="fas fa-home" style="color: var(--accent-color);"></i>
@@ -179,7 +201,7 @@
                 </div>
                 
                 <div class="service-card animate-fadeInRight">
-                    <img src="https://kimi-web-img.moonshot.cn/img/www.kinoroofing.com/418f523ae4c23b8531e026e629454354d6197d45.png" alt="Roof Repair Services">
+                    <img src="Images/IMG_0883.jpg" alt="Shingle roof on a two-story home" loading="lazy">
                     <div class="service-content">
                         <h3 class="service-title">
                             <i class="fas fa-tools" style="color: var(--accent-color);"></i>
@@ -192,7 +214,7 @@
                         <ul class="service-features">
                             <li>24/7 emergency response</li>
                             <li>Free damage assessment</li>
-                            <li>Insurance claim assistance</li>
+                            <li>Storm damage documentation</li>
                             <li>Same-day temporary repairs</li>
                         </ul>
                         <a href="tel:5126291342" class="btn btn-primary">
@@ -214,7 +236,7 @@
                     <div class="about-text">
                         <p>
                             <strong>Portillo Roofing LLC</strong> was founded with a clear mission: to bring honesty, 
-                            craftsmanship, and fairness back to the roofing industry. After 25+ years of experience, 
+                            craftsmanship, and fairness back to the roofing industry. Backed by Marco Sr.'s 25+ years of roofing experience, 
                             we understand that your roof is more than just protection—it's an investment in your 
                             home's future and your family's safety.
                         </p>
@@ -228,125 +250,94 @@
                             build lasting relationships, and raise the bar for what a roofing company should be.
                         </p>
                     </div>
-                    <div class="flex" style="gap: 1rem; margin-top: 2rem;">
+                    <div class="flex" style="gap: 2rem; margin-top: 2rem; flex-wrap: wrap;">
                         <div class="text-center">
                             <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">25+</div>
-                            <div style="color: var(--dark-gray);">Years in Business</div>
+                            <div style="color: var(--dark-gray);">Years of Roofing Experience</div>
                         </div>
                         <div class="text-center">
-                            <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">1000+</div>
-                            <div style="color: var(--dark-gray);">Happy Customers</div>
+                            <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">2025</div>
+                            <div style="color: var(--dark-gray);">Founded</div>
                         </div>
                         <div class="text-center">
-                            <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">100%</div>
-                            <div style="color: var(--dark-gray);">Satisfaction Rate</div>
+                            <div style="font-size: 2rem; color: var(--accent-color); font-weight: bold;">24/7</div>
+                            <div style="color: var(--dark-gray);">Emergency Response</div>
                         </div>
                     </div>
                 </div>
                 <div class="about-image animate-fadeInRight">
-                    <img src="https://kimi-web-img.moonshot.cn/img/www.improveitmd.com/a04f035cc509453435784c37dd5d4edc7b442a9d.webp" alt="Professional Roofing Team">
+                    <img src="Images/portfolio-curved-ridges-01.jpg" alt="Curved standing-seam metal roof, Curved Ridges project">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Gallery -->
+    <!-- Projects Gallery (teaser, pulled from portfolio-data.js) -->
     <section class="projects-section">
         <div class="container">
             <div class="text-center animate-fadeInUp">
                 <h2>Recent Projects</h2>
                 <p style="font-size: 1.125rem; color: var(--dark-gray); max-width: 600px; margin: 0 auto;">
-                    See the quality and craftsmanship that sets Portillo Roofing apart. 
+                    See the quality and craftsmanship that sets Portillo Roofing apart.
                     Each project showcases our commitment to excellence.
                 </p>
             </div>
-            
-            <div class="projects-grid" id="projectsGallery">
-                <div class="project-item">
-                    <img src="https://kimi-web-img.moonshot.cn/img/roofsbyrhino.com/049db49b2df36a1e5496148b11535df30ae73a54.jpg" alt="Metal Roof Project">
-                    <div class="project-overlay">
-                        <h4 style="color: #CC5500;">Metal Roof Installation</h4>
-                        <p style="color: #CC5500;">Residential • Austin, TX</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <img src="https://kimi-web-img.moonshot.cn/img/roof-elite.com/b39138b9b6b61937282fa45679a504eedf623c8f.jpg" alt="Shingle Roof Project">
-                    <div class="project-overlay">
-                        <h4 style="color: #CC5500;">Shingle Replacement</h4>
-                        <p style="color: #CC5500;">Residential • Round Rock, TX</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <img src="https://kimi-web-img.moonshot.cn/img/elorenergy.com/51d49913c661e21938946fb11ee53f12bfbe371a.jpg" alt="Commercial Project">
-                    <div class="project-overlay">
-                        <h4 style="color: #CC5500;">Commercial Roofing</h4>
-                        <p style="color: #CC5500;">Commercial • Austin, TX</p>
-                    </div>
-                </div>
+
+            <div class="projects-grid" id="projectsTeaser">
+                <!-- Populated from portfolio-data.js -->
+            </div>
+
+            <div class="text-center" style="margin-top: 2.5rem;">
+                <a href="portfolio.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-images"></i>
+                    View Full Portfolio
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Trust Signals Section -->
     <section class="section" style="background: var(--light-gray);">
         <div class="container">
             <div class="text-center animate-fadeInUp">
-                <h2>What Our Customers Say</h2>
-                <p style="font-size: 1.125rem; color: var(--dark-gray); margin-bottom: 3rem;">
-                    Don't just take our word for it—hear from satisfied homeowners across Austin.
+                <h2>Trusted by Homeowners Across Austin</h2>
+                <p style="font-size: 1.125rem; color: var(--dark-gray); max-width: 650px; margin: 0 auto 2.5rem;">
+                    We're a BBB accredited business. Customer reviews are on their way to this page as they
+                    come in — in the meantime, read what people are saying about us directly.
                 </p>
             </div>
-            
-            <div class="grid grid-3" style="gap: 2rem;">
-                <div class="card animate-fadeInLeft">
-                    <div class="card-body">
-                        <div style="color: var(--accent-color); font-size: 2rem; margin-bottom: 1rem;">★★★★★</div>
-                        <p style="font-style: italic; margin-bottom: 1rem;">
-                            "Portillo Roofing transformed our home with a beautiful metal roof. 
-                            Professional, punctual, and the quality is outstanding. Highly recommended!"
-                        </p>
-                        <div style="font-weight: 600; color: var(--primary-color);">
-                            — Sarah Johnson, Austin, TX
-                        </div>
-                    </div>
+
+            <div class="flex-center" style="gap: 2rem; flex-wrap: wrap;">
+                <div class="card" style="padding: 2rem; text-align: center; max-width: 320px;">
+                    <a href="https://www.bbb.org/us/tx/dale/profile/residential-roofing/portillo-roofing-0825-1000247730/#sealclick"
+                       target="_blank" rel="nofollow noopener">
+                        <img src="https://seal-austin.bbb.org/seals/blue-seal-200-65-bbb-1000247730.png"
+                             alt="Portillo Roofing BBB Business Review" style="max-width: 200px; height: auto; margin-bottom: 1rem;">
+                    </a>
+                    <div style="font-weight: 600; color: var(--primary-color);">BBB Accredited Business</div>
                 </div>
-                
-                <div class="card animate-fadeInUp">
-                    <div class="card-body">
-                        <div style="color: var(--accent-color); font-size: 2rem; margin-bottom: 1rem;">★★★★★</div>
-                        <p style="font-style: italic; margin-bottom: 1rem;">
-                            "After the storm, they responded immediately. Fixed our roof quickly 
-                            and worked with our insurance. Couldn't ask for better service."
-                        </p>
-                        <div style="font-weight: 600; color: var(--primary-color);">
-                            — Mike Rodriguez, Round Rock, TX
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card animate-fadeInRight">
-                    <div class="card-body">
-                        <div style="color: var(--accent-color); font-size: 2rem; margin-bottom: 1rem;">★★★★★</div>
-                        <p style="font-style: italic; margin-bottom: 1rem;">
-                            "Honest, reliable, and fairly priced. The Portillo team delivered 
-                            exactly what they promised. Our new roof looks fantastic!"
-                        </p>
-                        <div style="font-weight: 600; color: var(--primary-color);">
-                            — Jennifer Chen, Cedar Park, TX
-                        </div>
-                    </div>
+
+                <div class="card" style="padding: 2rem; text-align: center; max-width: 320px;">
+                    <i class="fas fa-star" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <div style="font-weight: 600; color: var(--primary-color); margin-bottom: 0.75rem;">Read Our Reviews</div>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.9rem;">
+                        See what real customers say about working with us.
+                    </p>
+                    <a href="https://share.google/cOX3Gk6kkZGoqbMvr" target="_blank" rel="nofollow noopener" class="btn btn-outline btn-sm">
+                        Read Reviews <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white);">
+    <section class="section cta-section">
         <div class="container text-center">
             <div class="animate-fadeInUp">
                 <h2 style="color: var(--white);">Ready to Start Your Roofing Project?</h2>
                 <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Get a free, no-obligation quote from Austin's most trusted roofing professionals.
+                    Get a free, no-obligation quote from a family-owned Austin roofing company.
                 </p>
                 <div class="flex-center" style="gap: 1rem; flex-wrap: wrap;">
                     <a href="contact.html" class="btn btn-primary btn-lg">
@@ -369,7 +360,7 @@
                 <div class="footer-section">
                     <h3>Portillo Roofing LLC</h3>
                     <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
-                        Professional roofing services in Austin, Texas. Licensed, insured, 
+                        Professional roofing services in Austin, Texas. Insured, 
                         and dedicated to excellence in every project.
                     </p>
                     <div style="margin-top: 1rem;">
@@ -389,9 +380,10 @@
                     <ul>
                         <li><a href="services.html#metal-roofing">Metal Roofing</a></li>
                         <li><a href="services.html#shingle-roofing">Shingle Roofing</a></li>
-                        <li><a href="services.html#roof-repair">Roof Repairs</a></li>
-                        <li><a href="services.html#emergency-services">Emergency Services</a></li>
-                        <li><a href="services.html#insurance-claims">Insurance Claims</a></li>
+                        <li><a href="services.html#emergency-repairs">Emergency Repairs</a></li>
+                        <li><a href="services.html#roof-inspections">Roof Inspections</a></li>
+                        <li><a href="services.html#insurance-claims">Storm Damage &amp; Insurance</a></li>
+                        <li><a href="services.html#epoxy-countertops">Interior Finishes</a></li>
                     </ul>
                 </div>
                 
@@ -427,6 +419,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Shared project data -->
+    <script src="portfolio-data.js"></script>
 
     <!-- Scripts -->
     <script>
@@ -497,7 +492,45 @@
             });
         });
 
-        // Project Gallery Hover Effects
+        // Render Recent Projects teaser from shared portfolio data
+        function renderTeaserItem(p) {
+            const photo = p.photo || 'Images/photo-placeholder.svg';
+            const badge = p.featured
+                ? `<div style="position: absolute; top: 0.75rem; left: 0.75rem; background: var(--accent-color); color: #fff; padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; z-index: 2;">
+                        <i class="fas fa-star"></i> Featured
+                   </div>`
+                : (p.inProgress
+                    ? `<div style="position: absolute; top: 0.75rem; left: 0.75rem; background: var(--charcoal-dark); color: #fff; padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; z-index: 2;">
+                            <i class="fas fa-hard-hat"></i> In Progress
+                       </div>`
+                    : '');
+            return `
+                <div class="project-item">
+                    ${badge}
+                    <img src="${photo}" alt="${p.name}">
+                    <div class="project-overlay">
+                        <h4 style="color: #CC5500;">${p.name}</h4>
+                        <p style="color: #CC5500;">${p.inProgress ? 'In Progress' : p.duration}</p>
+                    </div>
+                </div>`;
+        }
+
+        const projectsTeaser = document.getElementById('projectsTeaser');
+        if (PORTFOLIO_PROJECTS.length > 0) {
+            projectsTeaser.innerHTML = PORTFOLIO_PROJECTS.slice(0, 3).map(renderTeaserItem).join('');
+        } else {
+            projectsTeaser.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; background: var(--white);
+                            border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 3rem 2rem;">
+                    <i class="fas fa-images" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--primary-color);">Our Portfolio Is Growing</h3>
+                    <p style="color: var(--dark-gray); max-width: 500px; margin: 0 auto;">
+                        We're gathering photos from recent jobs — check back soon, or view the full portfolio page.
+                    </p>
+                </div>`;
+        }
+
+        // Project Gallery Hover Effects (bound after teaser render so dynamic items are included)
         document.querySelectorAll('.project-item').forEach(item => {
             item.addEventListener('mouseenter', function() {
                 anime({
@@ -507,7 +540,7 @@
                     easing: 'easeOutQuad'
                 });
             });
-            
+
             item.addEventListener('mouseleave', function() {
                 anime({
                     targets: this.querySelector('img'),

@@ -1,0 +1,15 @@
+severity,fix,where,why,owner
+Critical,Remove competitor photos hotlinked through kimi-web-img.moonshot.cn and captioned as Portillo projects,"main: index.html:75,182,247,266,273,280; services.html:71,96,142,284; about.html:71,119; contact.html:69 (relaunch branch already removes them)",Copyright + deceptive advertising; contradicts 'real project photos'.,"Claude (hotfix branch, your approval)"
+Critical,"Remove the three testimonials (Sarah Johnson, Mike Rodriguez, Jennifer Chen) - owner confirmed NOT real",main: index.html ~300-336,"FTC 16 CFR 465 (fake reviews/testimonials), civil penalties per violation.",Claude Code
+Critical,Rewrite insurance copy: 'work directly with your insurance company to ensure you get fair coverage' + 'Direct insurance billing',"main services.html:254,260; relaunch services.html:319,325",Tex. Ins. Code 4102.163: contractor may not act as or advertise as public adjuster; websites count as advertising (28 TAC 21.102).,"Claude drafts, Marco approves"
+Critical,"Add deductible notice to quote/contract template for insurance-funded jobs >= $1,000",quote system (generate_quote.js),Bus. & Com. Code 27.02; illegal to waive/absorb deductible.,Claude (quote system)
+High,"Use 'Founded 2025 - 25+ years of experience' everywhere; remove every '50+ years' and any '25+ years in business' wording (site, GBP, BBB, Yelp)",relaunch index.html / about.html,"Owner confirmed: founded 2025, 25+ years experience. Conflicting facts get repeated by AI answers.",Claude Code (site) / Marco (profiles)
+High,"Remove or source '1000+ roofs', '5-star rating', 'Lifetime warranty', 'Licensed'","relaunch index.html:100,104,170,262,366",Texas has no state roofing license; unsourced numbers flow into schema/AI copy.,Marco confirm -> Claude
+High,Verify 'BBB Accredited' claim against live BBB profile,"relaunch index.html:308,320",Claim must be true.,Marco
+High,Merge relaunch branch (after the fixes above),feature/crew-portfolio-update,Portfolio + cleaned pages are stuck unmerged since Aug 8.,Marco approves PR
+High,Render project pages as static HTML (not from portfolio-data.js),portfolio.html / portfolio-data.js,Most AI crawlers don't run JavaScript.,Claude
+High,Set up Google Search Console + Bing Webmaster Tools; submit sitemap; IndexNow ping on Netlify deploy,DNS / Netlify,ChatGPT search leans on Bing's index; GSC needed to measure anything.,Marco (accounts) + Claude (config)
+Medium,"robots.txt + sitemap.xml: allow Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, PerplexityBot",repo root,Allow search/answer crawlers; GPTBot / Google-Extended only govern training.,Claude
+Medium,"Build check: fail deploy if output HTML contains '[', 'TODO' or 'placeholder'",repo build script,Stops placeholders like '[year]' shipping.,Claude
+Medium,Photo-consent line in quote template; builder OK before publishing GC jobs,quote system,Needed before project pages publish.,Claude (quote system)
+Low,noindex /thank-you/; 301 every old .html URL to its new folder URL,_redirects,Clean index; no broken links.,Claude
